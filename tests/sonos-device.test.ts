@@ -3,7 +3,7 @@ import { EventEmitter } from 'events';
 import SonosDevice from '../src/sonos-device'
 import { TestHelpers } from './test-helpers';
 import SonosEventListener from '../src/sonos-event-listener';
-import { Guid } from 'guid-typescript';
+import { randomUUID } from 'crypto';
 import { SmapiClient } from '../src/musicservices/smapi-client';
 import { TransportState } from '../src/models';
 
@@ -554,10 +554,10 @@ describe('SonosDevice', () => {
 
   describe('MusicServicesClient(...)', () => {
     it('returns Spotify client', async () => {
-      const randomDeviceId: string = Guid.create().toString();
-      const randomAccountKey: string = Guid.create().toString();
-      const randomAccountToken:string = Guid.create().toString();
-      const randomHouseHoldId:string = Guid.create().toString();
+      const randomDeviceId: string = randomUUID();
+      const randomAccountKey: string = randomUUID();
+      const randomAccountToken:string = randomUUID();
+      const randomHouseHoldId:string = randomUUID();
       const port = 1405;
       const scope = TestHelpers.getScope(port);
       TestHelpers.mockRequest('/SystemProperties/Control',

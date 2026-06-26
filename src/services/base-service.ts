@@ -1,6 +1,6 @@
 import fetch, { Request, Response } from 'node-fetch';
 
-import { Guid } from 'guid-typescript';
+import { randomUUID } from 'crypto';
 import { EventEmitter } from 'events';
 import debug, { Debugger } from 'debug';
 import TypedEmitter from 'typed-emitter';
@@ -89,10 +89,10 @@ export default abstract class BaseService <TServiceEvent> {
    * Creates an instance of the implemented service.
    * @param {string} host The ip (or hostname) of the sonos speaker
    * @param {number} [port=1400] The port of the sonos speaker (defaults to 1400)
-   * @param {string} [uuid=Guid.create().toString()] The uuid of the speaker, used for grouping and events.
+   * @param {string} [uuid=randomUUID()] The uuid of the speaker, used for grouping and events.
    * @memberof BaseService
    */
-  constructor(host: string, port = 1400, private uuid: string = Guid.create().toString()) {
+  constructor(host: string, port = 1400, private uuid: string = randomUUID()) {
     this.host = host;
     this.port = port;
   }

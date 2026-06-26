@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { TestHelpers } from '../test-helpers';
 import { SystemPropertiesService } from '../../src/services/system-properties.service.extension';
-import { Guid } from 'guid-typescript';
+import { randomUUID } from 'crypto';
 
 describe('SystemPropertiesService', () => {
     describe('GetAccountData()', () => {
@@ -100,8 +100,8 @@ describe('SystemPropertiesService', () => {
           undefined,
           scope
         );
-        const key: string = Guid.create().toString();
-        const token:string = Guid.create().toString();
+        const key: string = randomUUID();
+        const token:string = randomUUID();
         TestHelpers.mockRequest('/SystemProperties/Control',
           '"urn:schemas-upnp-org:service:SystemProperties:1#SetString"',
           `<u:SetString xmlns:u="urn:schemas-upnp-org:service:SystemProperties:1"><VariableName>sonos-ts-300-key</VariableName><StringValue>${key}</StringValue></u:SetString>`,
@@ -145,8 +145,8 @@ describe('SystemPropertiesService', () => {
           undefined,
           scope
         );
-        const key: string = Guid.create().toString();
-        const token: string = Guid.create().toString();
+        const key: string = randomUUID();
+        const token: string = randomUUID();
         TestHelpers.mockRequest('/SystemProperties/Control',
           '"urn:schemas-upnp-org:service:SystemProperties:1#SetString"',
           `<u:SetString xmlns:u="urn:schemas-upnp-org:service:SystemProperties:1"><VariableName>sonos-ts-300-key</VariableName><StringValue>${key}</StringValue></u:SetString>`,
@@ -182,8 +182,8 @@ describe('SystemPropertiesService', () => {
           `<StringValue>300</StringValue>`,
           scope
         );
-        const key: string = Guid.create().toString();
-        const token: string = Guid.create().toString();
+        const key: string = randomUUID();
+        const token: string = randomUUID();
         TestHelpers.mockRequest('/SystemProperties/Control',
           '"urn:schemas-upnp-org:service:SystemProperties:1#SetString"',
           `<u:SetString xmlns:u="urn:schemas-upnp-org:service:SystemProperties:1"><VariableName>sonos-ts-300-key</VariableName><StringValue>${key}</StringValue></u:SetString>`,
