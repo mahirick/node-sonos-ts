@@ -1,7 +1,6 @@
 import { EventEmitter } from 'events';
 import TypedEmitter from 'typed-emitter';
 import fetch from 'node-fetch';
-import { parse } from 'fast-xml-parser';
 import SonosDeviceBase from './sonos-device-base';
 import {
   GetZoneInfoResponse, GetZoneAttributesResponse, AddURIToQueueResponse, AVTransportServiceEvent, RenderingControlServiceEvent, MusicService, AccountData,
@@ -16,6 +15,7 @@ import MetadataHelper from './helpers/metadata-helper';
 import { SmapiClient } from './musicservices/smapi-client';
 import IpHelper from './helpers/ip-helper';
 import JsonHelper from './helpers/json-helper';
+import XmlHelper from './helpers/xml-helper';
 import TtsHelper from './helpers/tts-helper';
 import DeviceDescription from './models/device-description';
 import { SonosState } from './models/sonos-state';
@@ -192,7 +192,7 @@ export default class SonosDevice extends SonosDeviceBase {
         }
         throw new Error(`Loading device description failed ${response.status} ${response.statusText}`);
       });
-    const { root: { device } } = parse(resp);
+    const { root: { device } } = XmlHelper.parse(resp);
     return {
       manufacturer: device.manufacturer,
       modelNumber: device.modelNumber,

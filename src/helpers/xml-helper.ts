@@ -1,7 +1,39 @@
-import { parse } from 'fast-xml-parser';
+import { XMLParser } from 'fast-xml-parser';
 import { encode, decode } from 'html-entities';
 
+interface XmlParseOptions {
+  attributeNamePrefix?: string;
+  removeNSPrefix?: boolean;
+  ignoreAttributes?: boolean;
+}
+
 export default class XmlHelper {
+  /**
+   * Parse an xml string with options that mirror the fast-xml-parser v3 defaults this
+   * library was written against. Centralised so every call site decodes identically:
+   * attribute values stay strings, tag values are coerced, and XML entities are left
+   * untouched (the codebase decodes entities explicitly via html-entities / manual replaces).
+   *
+   * @static
+   * @param {string} xml Xml string to parse
+   * @param {XmlParseOptions} options Per-site overrides for the few v3 options that varied
+   * @returns {*} a parsed Object of the XML string
+   * @memberof XmlHelper
+   */
+  static parse(xml: string, options: XmlParseOptions = {}): any {
+    const parser = new XMLParser({
+      attributeNamePrefix: options.attributeNamePrefix ?? '@_',
+      ignoreAttributes: options.ignoreAttributes ?? true,
+      removeNSPrefix: options.removeNSPrefix ?? false,
+      textNodeName: '#text',
+      parseTagValue: true,
+      parseAttributeValue: false,
+      trimValues: true,
+      processEntities: false,
+    });
+    return parser.parse(xml);
+  }
+
   /**
    * Decode an encoded xml string
    *
@@ -47,7 +79,7 @@ export default class XmlHelper {
   static DecodeAndParseXml(encodedXml: unknown, attributeNamePrefix = '_'): unknown {
     const decoded = XmlHelper.DecodeXml(encodedXml);
     if (typeof decoded === 'undefined') return undefined;
-    return parse(decoded, { ignoreAttributes: false, attributeNamePrefix });
+    return XmlHelper.parse(decoded, { ignoreAttributes: false, attributeNamePrefix });
   }
 
   /**
@@ -60,7 +92,7 @@ export default class XmlHelper {
    */
   static DecodeAndParseXmlNoNS(encodedXml: unknown, attributeNamePrefix = '_'): unknown {
     const decoded = XmlHelper.DecodeXml(encodedXml);
-    return decoded ? parse(decoded, { ignoreAttributes: false, ignoreNameSpace: true, attributeNamePrefix }) : undefined;
+    return decoded ? XmlHelper.parse(decoded, { ignoreAttributes: false, removeNSPrefix: true, attributeNamePrefix }) : undefined;
   }
 
   /**
