@@ -1,4 +1,3 @@
-import fetch, { Request } from 'node-fetch';
 import debug from 'debug';
 import {
   TtsResponse, PlayTtsOptions, PlayNotificationOptions, PlayNotificationOptionsBase,

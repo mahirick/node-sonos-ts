@@ -1,5 +1,3 @@
-import fetch, { Request, Response } from 'node-fetch';
-
 import { randomUUID } from 'crypto';
 import { EventEmitter } from 'events';
 import debug, { Debugger } from 'debug';
@@ -194,7 +192,7 @@ export default abstract class BaseService <TServiceEvent> {
           'Content-type': 'text/xml; charset=utf8',
         },
         body: this.generateRequestBody<TBody>(action, body),
-        timeout: 30000,
+        signal: AbortSignal.timeout(30000),
       },
     );
   }
@@ -406,7 +404,7 @@ export default abstract class BaseService <TServiceEvent> {
           NT: 'upnp:event',
           Timeout: 'Second-3600',
         },
-        timeout: 15000,
+        signal: AbortSignal.timeout(15000),
       },
     ));
     const sid = resp.ok ? resp.headers.get('sid') as string : undefined;
@@ -446,7 +444,7 @@ export default abstract class BaseService <TServiceEvent> {
             SID: this.sid,
             Timeout: 'Second-3600',
           },
-          timeout: 15000,
+          signal: AbortSignal.timeout(15000),
         },
       ));
       if (resp.ok) {
@@ -480,7 +478,7 @@ export default abstract class BaseService <TServiceEvent> {
           headers: {
             SID: this.sid,
           },
-          timeout: 15000,
+          signal: AbortSignal.timeout(15000),
         },
       ));
       SonosEventListener.DefaultInstance.UnregisterSubscription(this.sid);

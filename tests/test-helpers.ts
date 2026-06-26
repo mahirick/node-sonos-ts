@@ -231,6 +231,24 @@ export class TestHelpers {
     
   }
 
+  /**
+   * Poll until a condition holds or the timeout elapses. Returns as soon as the
+   * predicate is truthy, so it is independent of machine load (unlike a fixed delay).
+   * Needed because event subscribe/unsubscribe is registered out-of-band, and nock 14's
+   * @mswjs/interceptors engine delivers mocked responses with different (more async) timing
+   * than nock 13, widening the race a fixed delay used to mask.
+   * @param predicate Condition to wait for.
+   * @param timeoutMs Maximum time to wait before giving up.
+   * @param intervalMs Poll interval.
+   */
+  static async waitUntil(predicate: () => boolean, timeoutMs = 2000, intervalMs = 10): Promise<void> {
+    const deadline = Date.now() + timeoutMs;
+    while (!predicate()) {
+      if (Date.now() > deadline) return;
+      await new Promise((resolve) => setTimeout(resolve, intervalMs));
+    }
+  }
+
   static async expectThrowsAsync(method: Function, errorMessage?: string, upnpErrorDescription?: string) {
     let error: any = undefined;
     try {

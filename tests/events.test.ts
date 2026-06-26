@@ -3,8 +3,6 @@ import SonosDevice from '../src/sonos-device'
 import { TestHelpers } from './test-helpers';
 import SonosEventListener from '../src/sonos-event-listener';
 import { randomUUID } from 'crypto';
-import AsyncHelper from '../src/helpers/async-helper';
-import fetch from 'node-fetch';
 
 describe('SonosDevice - Events', () => {
   beforeAll(() => {
@@ -42,7 +40,8 @@ describe('SonosDevice - Events', () => {
     const statusBefore = SonosEventListener.DefaultInstance.GetStatus();
     expect(statusBefore.isListening).to.be.false;
     device.Events.on('currentTrack', (track) => {});
-    await AsyncHelper.Delay(50); // Delay is needed because the subscription is registered out-of-band.
+    // Subscriptions are registered out-of-band; poll until both have landed instead of guessing a delay.
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.length === 2);
 
     const statusAfter = SonosEventListener.DefaultInstance.GetStatus();
     expect(statusAfter.isListening).to.be.true;
@@ -84,16 +83,18 @@ describe('SonosDevice - Events', () => {
     const randomUuid = randomUUID();
     const device = new SonosDevice(TestHelpers.testHost, port, randomUuid);
     device.Events.on('currentTrack', (track) => {});
-    await AsyncHelper.Delay(20); // Delay is needed because the subscription is registered out-of-band.
+    // Subscriptions are registered out-of-band; poll until both have landed instead of guessing a delay.
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.length === 2);
 
     const statusBefore = SonosEventListener.DefaultInstance.GetStatus();
     expect(statusBefore.currentSubscriptions).to.be.an('array').that.has.lengthOf(2);
 
     device.Events.removeAllListeners('currentTrack');
-    await AsyncHelper.Delay(20); // Delay is needed because the subscription is registered out-of-band.
+    // Unsubscribe is also out-of-band; poll until both have been removed.
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.length === 0);
 
     const statusAfter = SonosEventListener.DefaultInstance.GetStatus();
-    expect(statusAfter.currentSubscriptions).to.be.an('array').that.has.lengthOf(0);    
+    expect(statusAfter.currentSubscriptions).to.be.an('array').that.has.lengthOf(0);
   });
 
   it('refreshes some subscriptions', async () => {
@@ -125,11 +126,11 @@ describe('SonosDevice - Events', () => {
 
     const device = new SonosDevice(TestHelpers.testHost, port);
     device.Events.on('currentTrack', (track) => { });
-    await AsyncHelper.Delay(100);
+    // Wait for both out-of-band subscriptions before refreshing them.
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.length === 2);
 
     const result = await device.RefreshEventSubscriptions();
     expect(result).to.be.true;
-    await AsyncHelper.Delay(100);    // scope.isDone();
   }, 3000);
 
   it('refreshes AVTransport events', async () => {
@@ -149,7 +150,8 @@ describe('SonosDevice - Events', () => {
 
     const device = new SonosDevice(TestHelpers.testHost, port);
     device.AVTransportService.Events.on('serviceEvent', (data) => { })
-    await AsyncHelper.Delay(50);
+    // Wait for the out-of-band AVTransport subscription before checking/renewing it.
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.some((s) => s.service === 'AVTransport'));
 
     const result = await device.AVTransportService.CheckEventListener();
     expect(result).to.be.true;

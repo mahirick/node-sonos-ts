@@ -1,4 +1,3 @@
-import fetch, { Request } from 'node-fetch';
 import debug, { Debugger } from 'debug';
 
 import SmapiError from './smapi-error';

@@ -1,6 +1,5 @@
 import { EventEmitter } from 'events';
 import TypedEmitter from 'typed-emitter';
-import fetch from 'node-fetch';
 import SonosDeviceBase from './sonos-device-base';
 import {
   GetZoneInfoResponse, GetZoneAttributesResponse, AddURIToQueueResponse, AVTransportServiceEvent, RenderingControlServiceEvent, MusicService, AccountData,
