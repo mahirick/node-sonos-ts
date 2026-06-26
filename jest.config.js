@@ -3,7 +3,7 @@ module.exports = {
     '.tsx?$': 'ts-jest'
   },
   testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  testPathIgnorePatterns: ['/dist/', '/node_modules/', '/tests/helpers/legacy-helpers.js', '/tests/test-helpers.ts'],
+  testPathIgnorePatterns: ['/dist/', '/node_modules/', '/tests/helpers/legacy-helpers.js', '/tests/test-helpers.ts', '\\.fixture\\.ts$'],
   moduleFileExtensions: ['ts', 'tsx', 'jsx', 'js', 'json'],
   testEnvironment: 'node',
   collectCoverage: true,
