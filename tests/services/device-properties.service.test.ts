@@ -87,7 +87,7 @@ describe('DevicePropertiesService', () => {
   });
 
   describe('GetDeviceCapabilities', () => {
-    it('executes correct request', async (done) => {
+    it('executes correct request', async () => {
       TestHelpers.mockRequestToService('/DeviceProperties/Control',
         'DeviceProperties',
         'SetLEDState',
@@ -97,7 +97,6 @@ describe('DevicePropertiesService', () => {
       const service = new DevicePropertiesService(TestHelpers.testHost);
       const result = await service.SetLEDState({ DesiredLEDState: 'Off'});
       expect(result).to.be.true;
-      done();
     });
   });
 

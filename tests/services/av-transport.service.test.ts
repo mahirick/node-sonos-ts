@@ -58,7 +58,7 @@ describe('AVTransportService', () => {
   });
 
   describe('GetCurrentTransportActions', () => {
-    it('executes correct request', async (done) => {
+    it('executes correct request', async () => {
       TestHelpers.mockRequestToService('/MediaRenderer/AVTransport/Control',
         'AVTransport',
         'GetCurrentTransportActions',
@@ -68,12 +68,11 @@ describe('AVTransportService', () => {
       const service = new AVTransportService(TestHelpers.testHost);
       const result = await service.GetCurrentTransportActions();
       expect(result.Actions).to.contain('Play');
-      done();
     });
   });
 
   describe('GetDeviceCapabilities', () => {
-    it('executes correct request', async (done) => {
+    it('executes correct request', async () => {
       TestHelpers.mockRequestToService('/MediaRenderer/AVTransport/Control',
         'AVTransport',
         'GetDeviceCapabilities',
@@ -85,12 +84,11 @@ describe('AVTransportService', () => {
       expect(result.PlayMedia).to.contain('NONE');
       expect(result.PlayMedia).to.contain('NETWORK');
       expect(result.RecMedia).to.contain('NOT_IMPLEMENTED');
-      done();
     });
   });
 
   describe('GetDeviceCapabilities', () => {
-    it('executes correct request', async (done) => {
+    it('executes correct request', async () => {
       TestHelpers.mockRequestToService('/MediaRenderer/AVTransport/Control',
         'AVTransport',
         'GetRemainingSleepTimerDuration',
@@ -101,7 +99,6 @@ describe('AVTransportService', () => {
       const result = await service.GetRemainingSleepTimerDuration();
       expect(result.RemainingSleepTimerDuration).to.be.equal('00:29:44');
       expect(result.CurrentSleepTimerGeneration).to.be.equal(1);
-      done();
     });
   });
 

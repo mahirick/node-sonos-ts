@@ -17,7 +17,7 @@ describe('SonosDevice - Events', () => {
     delete process.env.SONOS_DISABLE_LISTENER;
   })
 
-  it('automatically creates event subscription', async (done) => {
+  it('automatically creates event subscription', async () => {
     const port = 1402;
     const scope = TestHelpers.getScope(port);
 
@@ -51,11 +51,9 @@ describe('SonosDevice - Events', () => {
     const avSubscription = statusAfter.currentSubscriptions.find((s) => s.sid === avtransportSid);
     expect(avSubscription).to.be.not.undefined;
     expect(avSubscription?.uuid).to.be.equal(randomUuid);
-    expect(avSubscription?.service).to.be.equal('AVTransport');
-    done();
-  });
+    expect(avSubscription?.service).to.be.equal('AVTransport');  });
 
-  it('automatically unsubscribes event subscription', async (done) => {
+  it('automatically unsubscribes event subscription', async () => {
     const port = 1403;
     const scope = TestHelpers.getScope(port);
 
@@ -95,12 +93,10 @@ describe('SonosDevice - Events', () => {
     await AsyncHelper.Delay(20); // Delay is needed because the subscription is registered out-of-band.
 
     const statusAfter = SonosEventListener.DefaultInstance.GetStatus();
-    expect(statusAfter.currentSubscriptions).to.be.an('array').that.has.lengthOf(0);
-    done();
-    
+    expect(statusAfter.currentSubscriptions).to.be.an('array').that.has.lengthOf(0);    
   });
 
-  it('refreshes some subscriptions', async (done) => {
+  it('refreshes some subscriptions', async () => {
     process.env.DEBUG = 'sonos:*';
     const port = 2000;
     const scope = TestHelpers.getScope(port);
@@ -133,12 +129,10 @@ describe('SonosDevice - Events', () => {
 
     const result = await device.RefreshEventSubscriptions();
     expect(result).to.be.true;
-    await AsyncHelper.Delay(100);
-    done();
-    // scope.isDone();
+    await AsyncHelper.Delay(100);    // scope.isDone();
   }, 3000);
 
-  it('refreshes AVTransport events', async (done) => {
+  it('refreshes AVTransport events', async () => {
     const port = 2001;
     const scope = TestHelpers.getScope(port);
 
@@ -159,9 +153,7 @@ describe('SonosDevice - Events', () => {
 
     const result = await device.AVTransportService.CheckEventListener();
     expect(result).to.be.true;
-    scope.isDone();
-    done();
-  }, 3000);
+    scope.isDone();  }, 3000);
 });
 
 describe('SonosEventListener', () => {
@@ -199,25 +191,19 @@ describe('SonosEventListener - HTTP', () => {
     await SonosEventListener.DefaultInstance.StopListener();
   }, 1000)
 
-  it('/status works', async (done) => {
+  it('/status works', async () => {
     const response = await fetch('http://localhost:6329/status');
-    expect(response.ok).to.be.true;
-    done();
-  }, 10000);
+    expect(response.ok).to.be.true;  }, 10000);
 
-  it('/health works', async (done) => {
+  it('/health works', async () => {
     const response = await fetch('http://localhost:6329/health');
-    expect(response.ok).to.be.true;
-    done();
-  }, 1000);
+    expect(response.ok).to.be.true;  }, 1000);
 
-  it('/nonexisting returns 404', async (done) => {
+  it('/nonexisting returns 404', async () => {
     const response = await fetch('http://localhost:6329/nonexisting');
     
     expect(response.ok).to.be.false;
-    expect(response.status).to.be.eq(404, 'Status code should be 404');
-    done();
-  }, 1000);
+    expect(response.status).to.be.eq(404, 'Status code should be 404');  }, 1000);
 
 });
   

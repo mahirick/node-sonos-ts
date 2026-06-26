@@ -6,38 +6,38 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
 
 (process.env.SONOS_HOST ? describe : describe.skip)('SonosManager - local', () => {
 
-  it('Initializes from device (local)', async (done) => {
+  it('Initializes from device (local)', async () => {
     const manager = new SonosManager();
     await manager.InitializeFromDevice(process.env.SONOS_HOST || 'SHOULD_NEVER_GET_HERE');
     manager.CancelSubscription();
     expect(manager.Devices).to.be.an('array');
     expect(manager.Devices).to.have.length.greaterThan(1);
-    done();
   }, 100)
-  it('Initializes from discovery (local)', async (done) => {
+  it('Initializes from discovery (local)', async () => {
     const manager = new SonosManager();
     await manager.InitializeWithDiscovery();
     manager.CancelSubscription();
     expect(manager.Devices).to.be.an('array');
     expect(manager.Devices).to.have.length.greaterThan(1);
-    done();
   }, 1000)
 });
 
 (process.env.SONOS_HOST ? describe.skip : describe)('SonosManager', () => {
 
-  it('Emit new device after event', async (done) => {
+  it('Emit new device after event', async () => {
     const port = 1806;
     const scope = TestHelpers.getScope(port);
     TestHelpers.mockZoneGroupState(scope);
     process.env.SONOS_DISABLE_EVENTS = "true";
     const manager = new SonosManager();
     await manager.InitializeFromDevice(TestHelpers.testHost, port);
+
+    await new Promise<void>((resolve, reject) => {
     // Setup a fix state timeout
     const failed = setTimeout(() => {
       manager.CancelSubscription();
       delete process.env.SONOS_DISABLE_EVENTS;
-      fail();
+      reject(new Error('OnNewDevice was not emitted within 1500ms'));
     }, 1500)
 
     // This event should be triggered
@@ -45,7 +45,7 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
       manager.CancelSubscription();
       delete process.env.SONOS_DISABLE_EVENTS;
       clearTimeout(failed);
-      done();
+      resolve();
     })
 
     // Emit event with fake data on private member. This should trigger the discovery of a new device.
@@ -59,9 +59,10 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
       </e:property>
     </e:propertyset>`)
     }, 500)
+    });
   }, 3000)
 
-  it('Initializes from device', async (done) => {
+  it('Initializes from device', async () => {
     const port = 1800;
     const scope = TestHelpers.getScope(port);
     TestHelpers.mockZoneGroupState(scope);
@@ -72,10 +73,9 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
     delete process.env.SONOS_DISABLE_EVENTS;
     expect(manager.Devices).to.be.an('array');
     expect(manager.Devices).to.have.length.greaterThan(1);
-    done();
   }, 100)
 
-  it('Initializes from discovery', async (done) => {
+  it('Initializes from discovery', async () => {
     const port = 1400;
     const scope = TestHelpers.getScope(port, undefined, '127.0.0.1');
     TestHelpers.mockZoneGroupState(scope);
@@ -91,10 +91,9 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
     delete process.env.SONOS_DISABLE_EVENTS;
     expect(manager.Devices).to.be.an('array');
     expect(manager.Devices).to.have.length.greaterThan(1);
-    done();
   }, 5000)
 
-  it('Refreshes event subscriptions', async(done) => {
+  it('Refreshes event subscriptions', async () => {
     const port = 1801;
     const scope = TestHelpers.getScope(port);
     TestHelpers.mockZoneGroupState(scope);
@@ -104,6 +103,5 @@ import SonosDeviceDiscovery from '../src/sonos-device-discovery';
     await manager.CheckAllEventSubscriptions();
     manager.CancelSubscription();
     delete process.env.SONOS_DISABLE_EVENTS;
-    done();
   }, 2000)
 })

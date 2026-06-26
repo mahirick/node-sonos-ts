@@ -232,7 +232,7 @@ export class TestHelpers {
   }
 
   static async expectThrowsAsync(method: Function, errorMessage?: string, upnpErrorDescription?: string) {
-    let error = undefined;
+    let error: any = undefined;
     try {
       await method();
     } catch (err) {

@@ -110,18 +110,21 @@ export default class SonosEventListener {
   private requestHandler(req: IncomingMessage, resp: ServerResponse): void {
     if (req.url) {
       if (req.url.indexOf('/sonos/') > -1) {
-        return this.handleSonosRequest(req, resp);
+        this.handleSonosRequest(req, resp);
+        return;
       }
       if (req.url.endsWith('/status')) {
-        return this.handleStatusRequest(req, resp);
+        this.handleStatusRequest(req, resp);
+        return;
       }
       if (req.url.endsWith('/health')) {
-        return this.handleHealthRequest(req, resp);
+        this.handleHealthRequest(req, resp);
+        return;
       }
     }
 
     resp.statusCode = 404;
-    return resp.end();
+    resp.end();
   }
 
   private handleHealthRequest(req: IncomingMessage, resp: ServerResponse): void {
