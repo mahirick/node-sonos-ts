@@ -1,0 +1,3698 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) alarm-list-with-program-metadata [alarm] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Array [
+  Object {
+    "Duration": "00:08:00",
+    "Enabled": false,
+    "ID": 1712,
+    "IncludeLinkedZones": false,
+    "PlayMode": "SHUFFLE",
+    "ProgramMetaData": Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "1006206cspotify%3auser%3aspotify%3aplaylist%3a37i9dQZF1DWZpGSuzrdTXg",
+      "ParentId": "10082064featured_pls",
+      "ProtocolInfo": undefined,
+      "Title": "Easy On Sunday",
+      "TrackUri": undefined,
+      "UpnpClass": "object.container.playlistContainer",
+    },
+    "ProgramURI": "x-rincon-cpcontainer:1006206cspotify:user:spotify:playlist:37i9dQZF1DWZpGSuzrdTXg?sid=9&flags=8300&sn=7",
+    "Recurrence": "WEEKDAYS",
+    "RoomUUID": "RINCON_B8E9378A0DDC01400",
+    "StartLocalTime": "08:15:00",
+    "Volume": 8,
+  },
+  Object {
+    "Duration": "00:20:00",
+    "Enabled": true,
+    "ID": 1715,
+    "IncludeLinkedZones": false,
+    "PlayMode": "SHUFFLE",
+    "ProgramMetaData": Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "1006206cspotify%3auser%3aspotify%3aplaylist%3a37i9dQZF1DX4WYpdgoIcn6",
+      "ParentId": "10082664playlists",
+      "ProtocolInfo": undefined,
+      "Title": "Chill Hits",
+      "TrackUri": undefined,
+      "UpnpClass": "object.container.playlistContainer",
+    },
+    "ProgramURI": "x-rincon-cpcontainer:1006206cspotify:user:spotify:playlist:37i9dQZF1DX4WYpdgoIcn6?sid=9&flags=8300&sn=7",
+    "Recurrence": "WEEKDAYS",
+    "RoomUUID": "RINCON_B8E9375A170401400",
+    "StartLocalTime": "07:45:00",
+    "Volume": 8,
+  },
+]
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) browse-artist-eminem-filecifs-art [browse] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "NumberReturned": 4,
+  "Result": Array [
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/eminem/",
+      "ParentId": "A:ARTIST/eminem",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "All",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/eminem/",
+      "UpnpClass": "object.container.playlistContainer.sameArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?u=x-file-cifs%3a%2f%2fnas.local%2fmusic%2fEminem%2fEncore%2520%255b2004%255d%2f01%2520Eminem%2520-%2520Encore%2520%255b2004%255d-%2520Curtains%2520Up.mp3&v=1958",
+      "Artist": "Eminem",
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/eminem/Encore",
+      "ParentId": "A:ARTIST/eminem",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Encore",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/eminem/Encore",
+      "UpnpClass": "object.container.album.musicAlbum",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?u=x-file-cifs%3a%2f%2fnas.local%2fmusic%2fEminem%2fThe%2520Marshall%2520Mathers%2520LP%2520%255b2000%255d%2f01%2520Eminem%2520-%2520The%2520Marshall%2520Mathers%2520LP%2520%255b2000%255d-%2520Public%2520Service%2520Announcement%25202000.mp3&v=1958",
+      "Artist": "Eminem",
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/eminem/The%20Marshall%20Mathers%20LP",
+      "ParentId": "A:ARTIST/eminem",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "The Marshall Mathers LP",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/eminem/The Marshall Mathers LP",
+      "UpnpClass": "object.container.album.musicAlbum",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?u=x-file-cifs%3a%2f%2fnas.local%2fmusic%2fEminem%2fThe%2520Marshall%2520Mathers%2520LP%25202%2520%255b2013%255d%2f01%2520Eminem%2520-%2520The%2520Marshall%2520Mathers%2520LP%25202%2520%255b2013%255d-%2520Bad%2520Guy.mp3&v=1958",
+      "Artist": "Eminem",
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/eminem/The%20Marshall%20Mathers%20LP%202",
+      "ParentId": "A:ARTIST/eminem",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "The Marshall Mathers LP 2",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/eminem/The Marshall Mathers LP 2",
+      "UpnpClass": "object.container.album.musicAlbum",
+    },
+  ],
+  "TotalMatches": 4,
+  "UpdateID": 0,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) browse-favorites-nested-resmd [browse] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "NumberReturned": 6,
+  "Result": Array [
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "https://i.scdn.co/image/f8eb3c2a6921b2a71f5a4a4de7eecc6fc8cf5021",
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/21",
+      "ParentId": "FV:2",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bottoms Up",
+      "TrackUri": "x-sonos-spotify:spotify:track:7nDoBWDvf02SyD8kEQuuPO?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://spotify-static-resources.s3.amazonaws.com/imgstub/your_music_v4_legacy.png",
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/22",
+      "ParentId": "FV:2",
+      "ProtocolInfo": undefined,
+      "Title": "Je bibliotheek",
+      "TrackUri": undefined,
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://d1i6vahw24eb07.cloudfront.net/s106914q.gif",
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/9",
+      "ParentId": "FV:2",
+      "ProtocolInfo": "x-sonosapi-stream:*:*:*",
+      "Title": "Q-Dance Hard",
+      "TrackUri": "x-sonosapi-stream:s106914?sid=254&flags=32",
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": "http://d1i6vahw24eb07.cloudfront.net/s87683q.gif",
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/2",
+      "ParentId": "FV:2",
+      "ProtocolInfo": "x-sonosapi-stream:*:*:*",
+      "Title": "Q-Music",
+      "TrackUri": "x-sonosapi-stream:s87683?sid=254&flags=32",
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/24",
+      "ParentId": "FV:2",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Sky Radio",
+      "TrackUri": "x-sonosapi-stream:s9067?sid=254&flags=32",
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "FV:2/13",
+      "ParentId": "FV:2",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "SLAM!FM",
+      "TrackUri": "x-sonosapi-stream:s67814?sid=254&flags=32",
+      "UpnpClass": "object.itemobject.item.sonos-favorite",
+    },
+  ],
+  "TotalMatches": 6,
+  "UpdateID": 3,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) browse-queue-70-tracks [browse] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "NumberReturned": 70,
+  "Result": Array [
+    Object {
+      "Album": "In
+  My Head",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a69uxus0d23ZnTHXi1dVldS%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Quintino",
+      "Duration": "0:02:51",
+      "ItemId": "Q:0/1",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "In
+  My
+  Head",
+      "TrackUri": "x-sonos-spotify:spotify:track:69uxus0d23ZnTHXi1dVldS?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Where Do You Think You Are Going",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a67LE3pbU8ZZxBJmLhEFupM%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Yves
+  V",
+      "Duration": "0:02:36",
+      "ItemId": "Q:0/2",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Where
+  Do You Think You Are
+  Going",
+      "TrackUri": "x-sonos-spotify:spotify:track:67LE3pbU8ZZxBJmLhEFupM?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Boom",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0YwlHzRYRU2LV2gtWklmD5%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Mike
+  Candys",
+      "Duration": "0:02:19",
+      "ItemId": "Q:0/3",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Boom",
+      "TrackUri": "x-sonos-spotify:spotify:track:0YwlHzRYRU2LV2gtWklmD5?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Forget You",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a5yo9aAVvgiINP2lowSXP5Y%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Yves
+  V",
+      "Duration": "0:02:45",
+      "ItemId": "Q:0/4",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Forget
+  You",
+      "TrackUri": "x-sonos-spotify:spotify:track:5yo9aAVvgiINP2lowSXP5Y?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "The
+  Portrait (Ooh La La) (with Gabry Ponte)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a6kvxoUQy6cKZvc8DFc4Smb%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "R3HAB",
+      "Duration": "0:02:16",
+      "ItemId": "Q:0/5",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "The
+  Portrait (Ooh La La) (with Gabry
+  Ponte)",
+      "TrackUri": "x-sonos-spotify:spotify:track:6kvxoUQy6cKZvc8DFc4Smb?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Red Light, Green Light",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4W8uqSbhmHgVoTJz6CsBEB%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Squid
+  Kids",
+      "Duration": "0:02:11",
+      "ItemId": "Q:0/6",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Red
+  Light, Green
+  Light",
+      "TrackUri": "x-sonos-spotify:spotify:track:4W8uqSbhmHgVoTJz6CsBEB?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Dancing In The Dark",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0SxQ285CrPeOtaF0BYxzS0%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Ilkay
+  Sencan",
+      "Duration": "0:02:19",
+      "ItemId": "Q:0/7",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Dancing
+  In The
+  Dark",
+      "TrackUri": "x-sonos-spotify:spotify:track:0SxQ285CrPeOtaF0BYxzS0?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Best Kinda Love",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0F3dDjUap1EI7YtAFQ9UZu%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Kim
+  Kaey",
+      "Duration": "0:02:21",
+      "ItemId": "Q:0/8",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Best
+  Kinda Love",
+      "TrackUri": "x-sonos-spotify:spotify:track:0F3dDjUap1EI7YtAFQ9UZu?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Where Are You Now",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3uUuGVFu1V7jTQL60S1r8z%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Lost
+  Frequencies",
+      "Duration": "0:02:28",
+      "ItemId": "Q:0/9",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Where
+  Are You
+  Now",
+      "TrackUri": "x-sonos-spotify:spotify:track:3uUuGVFu1V7jTQL60S1r8z?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Last Thought (feat. MKLA)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1tZC1ktebdhQSlhnFSetLk%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Sonny
+  Fodera",
+      "Duration": "0:03:58",
+      "ItemId": "Q:0/10",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Last
+  Thought (feat.
+  MKLA)",
+      "TrackUri": "x-sonos-spotify:spotify:track:1tZC1ktebdhQSlhnFSetLk?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "If You Really Love Me (How Will I
+  Know)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1V7bZ9gEIwFQpm8yGxRHNA%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "David
+  Guetta",
+      "Duration": "0:03:04",
+      "ItemId": "Q:0/11",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "If
+  You Really Love Me (How Will I
+  Know)",
+      "TrackUri": "x-sonos-spotify:spotify:track:1V7bZ9gEIwFQpm8yGxRHNA?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Bulletproof",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0SyxZC4wlqAwf20cHE6Xon%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "La
+  Roux",
+      "Duration": "0:02:42",
+      "ItemId": "Q:0/12",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bulletproof",
+      "TrackUri": "x-sonos-spotify:spotify:track:0SyxZC4wlqAwf20cHE6Xon?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "ALL WE HAVE IS
+  N:OW",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a45qQ4VQkG5MVbFJZXOMSs6%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Dimitri
+  Vegas & Like Mike",
+      "Duration": "0:02:38",
+      "ItemId": "Q:0/13",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Reunion
+  (Free Fire 4th Anniversary Theme Song) [with Alok &
+  Zafrir]",
+      "TrackUri": "x-sonos-spotify:spotify:track:45qQ4VQkG5MVbFJZXOMSs6?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Trompetisto",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7LZQAYj5NmW7Db2y8k7dXm%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Sjaak",
+      "Duration": "0:02:20",
+      "ItemId": "Q:0/14",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Trompetisto",
+      "TrackUri": "x-sonos-spotify:spotify:track:7LZQAYj5NmW7Db2y8k7dXm?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "I Got A Feeling (James Hype Remix)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4SYbdrmyDpCvWkoC4skk5z%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Felix
+  Jaehn",
+      "Duration": "0:02:41",
+      "ItemId": "Q:0/15",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "I
+  Got A Feeling - James Hype
+  Remix",
+      "TrackUri": "x-sonos-spotify:spotify:track:4SYbdrmyDpCvWkoC4skk5z?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Oohla
+  Oohla",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3g36KmRGI8hmnCcTFak4Wn%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Tiësto",
+      "Duration": "0:02:23",
+      "ItemId": "Q:0/16",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Oohla
+  Oohla",
+      "TrackUri": "x-sonos-spotify:spotify:track:3g36KmRGI8hmnCcTFak4Wn?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Wicked
+  Lullaby",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1aFyrATZgmxWeqJ083HDNk%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "LUNAX",
+      "Duration": "0:02:46",
+      "ItemId": "Q:0/17",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Wicked
+  Lullaby",
+      "TrackUri": "x-sonos-spotify:spotify:track:1aFyrATZgmxWeqJ083HDNk?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Catch
+  My Love",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0C0LsZeUyAG50xJKEIpBgY%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Noizu",
+      "Duration": "0:02:28",
+      "ItemId": "Q:0/18",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Catch
+  My
+  Love",
+      "TrackUri": "x-sonos-spotify:spotify:track:0C0LsZeUyAG50xJKEIpBgY?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "OUT OUT (feat. Charli XCX &
+  Saweetie)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a6Dy1jexKYriXAVG6evyUTJ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Joel
+  Corry",
+      "Duration": "0:02:42",
+      "ItemId": "Q:0/19",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "OUT
+  OUT (feat. Charli XCX &
+  Saweetie)",
+      "TrackUri": "x-sonos-spotify:spotify:track:6Dy1jexKYriXAVG6evyUTJ?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Love
+  Tonight",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a6OufwUcCqo81guU2jAlDVP%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Shouse",
+      "Duration": "0:04:01",
+      "ItemId": "Q:0/20",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Love
+  Tonight -
+  Edit",
+      "TrackUri": "x-sonos-spotify:spotify:track:6OufwUcCqo81guU2jAlDVP?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Eyes
+  On You",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1evX3NUBE7QujnSmky2ox4%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "HUGEL",
+      "Duration": "0:03:22",
+      "ItemId": "Q:0/21",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Eyes
+  On
+  You",
+      "TrackUri": "x-sonos-spotify:spotify:track:1evX3NUBE7QujnSmky2ox4?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Million Dreams",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0yHP5chOwBC6BUWXPIxQcc%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Ummet
+  Ozcan",
+      "Duration": "0:03:08",
+      "ItemId": "Q:0/22",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Million
+  Dreams",
+      "TrackUri": "x-sonos-spotify:spotify:track:0yHP5chOwBC6BUWXPIxQcc?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Bassman",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0X8PiJHcTFmmUwsGpvtFik%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Blasterjaxx",
+      "Duration": "0:02:40",
+      "ItemId": "Q:0/23",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bassman",
+      "TrackUri": "x-sonos-spotify:spotify:track:0X8PiJHcTFmmUwsGpvtFik?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Feel Your Love",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4h4c2nt7wTFLn0OYVDWOHC%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Dimitri
+  Vegas & Like Mike",
+      "Duration": "0:03:12",
+      "ItemId": "Q:0/24",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Feel
+  Your
+  Love",
+      "TrackUri": "x-sonos-spotify:spotify:track:4h4c2nt7wTFLn0OYVDWOHC?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Don't You Hold Me Down",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0d1ujEcFwTqA4kWliTSJim%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Alan
+  Walker",
+      "Duration": "0:02:12",
+      "ItemId": "Q:0/25",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Don't
+  You Hold Me
+  Down",
+      "TrackUri": "x-sonos-spotify:spotify:track:0d1ujEcFwTqA4kWliTSJim?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Never
+  Going Home (Extended Mix)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7kbZ3hEGrOvxLJK6pZ8Mp6%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Kungs",
+      "Duration": "0:02:49",
+      "ItemId": "Q:0/26",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Never
+  Going
+  Home",
+      "TrackUri": "x-sonos-spotify:spotify:track:7kbZ3hEGrOvxLJK6pZ8Mp6?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Bad
+  Boy",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4QF7JJPQUM046PsBZQkJFa%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Jebroer",
+      "Duration": "0:02:32",
+      "ItemId": "Q:0/27",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bad
+  Boy",
+      "TrackUri": "x-sonos-spotify:spotify:track:4QF7JJPQUM046PsBZQkJFa?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Zonder",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3XuPfjiRkqobQb3st2nfT8%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Zonderling",
+      "Duration": "0:02:54",
+      "ItemId": "Q:0/28",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Zonder",
+      "TrackUri": "x-sonos-spotify:spotify:track:3XuPfjiRkqobQb3st2nfT8?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Thunder",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2USlegnFJLrVLpoVfPimKB%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Gabry
+  Ponte",
+      "Duration": "0:02:40",
+      "ItemId": "Q:0/29",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Thunder",
+      "TrackUri": "x-sonos-spotify:spotify:track:2USlegnFJLrVLpoVfPimKB?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "My Heart Goes (La Di Da) (feat.
+  Topic)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4xMbBESczlHPUO8QeYi56p%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Becky
+  Hill",
+      "Duration": "0:02:28",
+      "ItemId": "Q:0/30",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "My
+  Heart Goes (La Di Da) (feat.
+  Topic)",
+      "TrackUri": "x-sonos-spotify:spotify:track:4xMbBESczlHPUO8QeYi56p?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "This
+  Is Our Legacy",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a32aKImKoiukzUxnWENXJXb%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "W&W",
+      "Duration": "0:02:39",
+      "ItemId": "Q:0/31",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "This
+  Is Our
+  Legacy",
+      "TrackUri": "x-sonos-spotify:spotify:track:32aKImKoiukzUxnWENXJXb?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Paper Planes",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4mrAArfFEIqpH6myouJb03%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Lucas
+  & Steve",
+      "Duration": "0:03:06",
+      "ItemId": "Q:0/32",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Paper
+  Planes",
+      "TrackUri": "x-sonos-spotify:spotify:track:4mrAArfFEIqpH6myouJb03?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Hide
+  Away",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0CQctRjgAceCvmtQ1CCY22%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "VINAI",
+      "Duration": "0:02:30",
+      "ItemId": "Q:0/33",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Hide
+  Away",
+      "TrackUri": "x-sonos-spotify:spotify:track:0CQctRjgAceCvmtQ1CCY22?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Flexin",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2OvqYU6lo9GA6hO2jVttKm%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Mike
+  Candys",
+      "Duration": "0:02:15",
+      "ItemId": "Q:0/34",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Flexin",
+      "TrackUri": "x-sonos-spotify:spotify:track:2OvqYU6lo9GA6hO2jVttKm?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Marble",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0ymH3Qwwzkl802WD3yy0oY%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Neptunica",
+      "Duration": "0:02:18",
+      "ItemId": "Q:0/35",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Marble",
+      "TrackUri": "x-sonos-spotify:spotify:track:0ymH3Qwwzkl802WD3yy0oY?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Another Chance",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2zJ5nuyOQi4jBvToG3HHys%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Roger
+  Sanchez",
+      "Duration": "0:04:14",
+      "ItemId": "Q:0/36",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Another
+  Chance",
+      "TrackUri": "x-sonos-spotify:spotify:track:2zJ5nuyOQi4jBvToG3HHys?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Alright (feat. KIDDO)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1vUOJpWc091SBYULNvz9mp%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Alle
+  Farben",
+      "Duration": "0:02:49",
+      "ItemId": "Q:0/37",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Alright
+  (feat.
+  KIDDO)",
+      "TrackUri": "x-sonos-spotify:spotify:track:1vUOJpWc091SBYULNvz9mp?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "By Your Side (feat. Tom Grennan)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0vR2rIVORmgeKiGIgNT0fV%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Calvin
+  Harris",
+      "Duration": "0:03:09",
+      "ItemId": "Q:0/38",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "By
+  Your Side (feat. Tom
+  Grennan)",
+      "TrackUri": "x-sonos-spotify:spotify:track:0vR2rIVORmgeKiGIgNT0fV?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Sun Came Up",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2wf2KMhjoHSZXKVHNBoTMg%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Sofi
+  Tukker",
+      "Duration": "0:03:22",
+      "ItemId": "Q:0/39",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Sun
+  Came Up",
+      "TrackUri": "x-sonos-spotify:spotify:track:2wf2KMhjoHSZXKVHNBoTMg?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Pepas",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a5fwSHlTEWpluwOM0Sxnh5k%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Farruko",
+      "Duration": "0:04:47",
+      "ItemId": "Q:0/40",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Pepas",
+      "TrackUri": "x-sonos-spotify:spotify:track:5fwSHlTEWpluwOM0Sxnh5k?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Safe
+  & Sound",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a6hgIDN5RsdT3ujELVkZKGO%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Curbi",
+      "Duration": "0:03:20",
+      "ItemId": "Q:0/41",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Safe
+  & Sound - Radio
+  Edit",
+      "TrackUri": "x-sonos-spotify:spotify:track:6hgIDN5RsdT3ujELVkZKGO?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Losing My Religion (feat. MKLA)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7u6EvUNJUmycM4IHEiHasm%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Steve
+  Aoki",
+      "Duration": "0:02:48",
+      "ItemId": "Q:0/42",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Losing
+  My Religion (feat.
+  MKLA)",
+      "TrackUri": "x-sonos-spotify:spotify:track:7u6EvUNJUmycM4IHEiHasm?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Anywhere
+  With You",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a5MxKAr6Ui5hQ9TtjdnlmrR%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Afrojack",
+      "Duration": "0:02:38",
+      "ItemId": "Q:0/43",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Anywhere
+  With
+  You",
+      "TrackUri": "x-sonos-spotify:spotify:track:5MxKAr6Ui5hQ9TtjdnlmrR?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Don't
+  Be Shy",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0bI7K9Becu2dtXK1Q3cZNB%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Tiësto",
+      "Duration": "0:02:20",
+      "ItemId": "Q:0/44",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Don't
+  Be
+  Shy",
+      "TrackUri": "x-sonos-spotify:spotify:track:0bI7K9Becu2dtXK1Q3cZNB?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Bring It Back To Me",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a5pqm3ulg0pXHgJ53dHpP23%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Robbie
+  Mendez",
+      "Duration": "0:02:42",
+      "ItemId": "Q:0/45",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bring
+  It Back To
+  Me",
+      "TrackUri": "x-sonos-spotify:spotify:track:5pqm3ulg0pXHgJ53dHpP23?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Written
+  In The Stars",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4UGvqi9PIjHesEpPOO7Hl8%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Tungevaag",
+      "Duration": "0:03:10",
+      "ItemId": "Q:0/46",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Written
+  In The
+  Stars",
+      "TrackUri": "x-sonos-spotify:spotify:track:4UGvqi9PIjHesEpPOO7Hl8?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Staring
+  At The Bottle",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a76OOmMnaTR0ofp52ZhUSyT%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Jerome",
+      "Duration": "0:02:31",
+      "ItemId": "Q:0/47",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Staring
+  At The
+  Bottle",
+      "TrackUri": "x-sonos-spotify:spotify:track:76OOmMnaTR0ofp52ZhUSyT?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Diamonds",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4TA48C6sa3lRrr2hHFbePR%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Martin
+  Garrix",
+      "Duration": "0:03:25",
+      "ItemId": "Q:0/48",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Diamonds",
+      "TrackUri": "x-sonos-spotify:spotify:track:4TA48C6sa3lRrr2hHFbePR?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Anita",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2M2P3sbarzko7EWUtdaANf%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Armin
+  van Buuren",
+      "Duration": "0:03:00",
+      "ItemId": "Q:0/49",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Anita",
+      "TrackUri": "x-sonos-spotify:spotify:track:2M2P3sbarzko7EWUtdaANf?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Sandstorm",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3pxqZmJ0G4qHFU3ilQqjuj%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "MATTN",
+      "Duration": "0:03:12",
+      "ItemId": "Q:0/50",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Sandstorm",
+      "TrackUri": "x-sonos-spotify:spotify:track:3pxqZmJ0G4qHFU3ilQqjuj?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Bad Habits (MEDUZA Remix)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a12N23tQKmfGcEO0z8ObwtM%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Ed
+  Sheeran",
+      "Duration": "0:03:14",
+      "ItemId": "Q:0/51",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Bad
+  Habits - MEDUZA
+  Remix",
+      "TrackUri": "x-sonos-spotify:spotify:track:12N23tQKmfGcEO0z8ObwtM?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "This Life (feat. Sydnee Carter)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2H1kgOxpXNjore1nTsCXgz%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Needs
+  No Sleep",
+      "Duration": "0:02:53",
+      "ItemId": "Q:0/52",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "This
+  Life (feat. Sydnee
+  Carter)",
+      "TrackUri": "x-sonos-spotify:spotify:track:2H1kgOxpXNjore1nTsCXgz?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Domino
+  (feat. Oxia)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1TepyN2GXukyc6wo3kTFMO%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Alok",
+      "Duration": "0:02:38",
+      "ItemId": "Q:0/53",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Domino
+  (feat.
+  Oxia)",
+      "TrackUri": "x-sonos-spotify:spotify:track:1TepyN2GXukyc6wo3kTFMO?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "La
+  167",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2mL37yB3f3Lfy4iiXV02Qf%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Farruko",
+      "Duration": "0:04:27",
+      "ItemId": "Q:0/54",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "El
+  Incomprendido",
+      "TrackUri": "x-sonos-spotify:spotify:track:2mL37yB3f3Lfy4iiXV02Qf?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Tightrope",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7hdy8UqbRmEyOcsF1DcfhJ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "MAXAM",
+      "Duration": "0:02:24",
+      "ItemId": "Q:0/55",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Tightrope",
+      "TrackUri": "x-sonos-spotify:spotify:track:7hdy8UqbRmEyOcsF1DcfhJ?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Gatluak
+  (Bakermat Remix)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2Lm5JYv2QaaPx204pMB4Qy%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Kronan",
+      "Duration": "0:02:19",
+      "ItemId": "Q:0/56",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Gatluak
+  - Bakermat
+  Remix",
+      "TrackUri": "x-sonos-spotify:spotify:track:2Lm5JYv2QaaPx204pMB4Qy?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Dopamine (feat. Eyelar)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7hSqDio508Z7R2hZ7klFrv%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Purple
+  Disco Machine",
+      "Duration": "0:03:36",
+      "ItemId": "Q:0/57",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Dopamine
+  (feat.
+  Eyelar)",
+      "TrackUri": "x-sonos-spotify:spotify:track:7hSqDio508Z7R2hZ7klFrv?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Trust",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1MF9LIpWa5nEbe3uLuhwfz%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Voost",
+      "Duration": "0:02:40",
+      "ItemId": "Q:0/58",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Trust",
+      "TrackUri": "x-sonos-spotify:spotify:track:1MF9LIpWa5nEbe3uLuhwfz?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Sweet Dreams",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0uIwEMEjZDGrZ3NvxK3T9F%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Alan
+  Walker",
+      "Duration": "0:02:18",
+      "ItemId": "Q:0/59",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Sweet
+  Dreams",
+      "TrackUri": "x-sonos-spotify:spotify:track:0uIwEMEjZDGrZ3NvxK3T9F?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "In Da Getto",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a63aj87TQG6F3RVO5nbG2VQ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "J
+  Balvin",
+      "Duration": "0:02:11",
+      "ItemId": "Q:0/60",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "In
+  Da Getto",
+      "TrackUri": "x-sonos-spotify:spotify:track:63aj87TQG6F3RVO5nbG2VQ?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Ride
+  With Me (feat. Kid Ink) [Brennan Heart Remix]",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a74CkeJ0vYYTdQImnaLy759%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Tungevaag",
+      "Duration": "0:03:50",
+      "ItemId": "Q:0/61",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Ride
+  With Me (feat. Kid Ink) - Brennan Heart
+  Remix",
+      "TrackUri": "x-sonos-spotify:spotify:track:74CkeJ0vYYTdQImnaLy759?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Talamanca",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7dDLAQ1y0qOq3E4DhNh8FS%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "BURNS",
+      "Duration": "0:03:06",
+      "ItemId": "Q:0/62",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Talamanca",
+      "TrackUri": "x-sonos-spotify:spotify:track:7dDLAQ1y0qOq3E4DhNh8FS?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Do
+  It To It",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a20on25jryn53hWghthWWW3%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "ACRAZE",
+      "Duration": "0:02:37",
+      "ItemId": "Q:0/63",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Do
+  It To
+  It",
+      "TrackUri": "x-sonos-spotify:spotify:track:20on25jryn53hWghthWWW3?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Keep On Rising (feat. Michelle Shellers) [ManyFew & Joe Stone
+  Remix]",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a16875gBT6JDTkstpu22ESZ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Ian
+  Carey",
+      "Duration": "0:02:36",
+      "ItemId": "Q:0/64",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Keep
+  On Rising (feat. Michelle Shellers) - ManyFew & Joe Stone
+  Remix",
+      "TrackUri": "x-sonos-spotify:spotify:track:16875gBT6JDTkstpu22ESZ?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "What
+  You've Done To Me (feat. Bemendé)",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2k9kWgFLCiAeRBTmwlGbAv%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "KREAM",
+      "Duration": "0:02:46",
+      "ItemId": "Q:0/65",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "What
+  You've Done To Me (feat.
+  Bemendé)",
+      "TrackUri": "x-sonos-spotify:spotify:track:2k9kWgFLCiAeRBTmwlGbAv?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Talk About",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a1olCzMxaeiQKNO64ssWVGr%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Rain
+  Radio",
+      "Duration": "0:02:41",
+      "ItemId": "Q:0/66",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Talk
+  About",
+      "TrackUri": "x-sonos-spotify:spotify:track:1olCzMxaeiQKNO64ssWVGr?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "I
+  Got The Feeling",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2cbcV1K8PD1bNlfhFEaGLK%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Groovenatics",
+      "Duration": "0:03:21",
+      "ItemId": "Q:0/67",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "I
+  Got The
+  Feeling",
+      "TrackUri": "x-sonos-spotify:spotify:track:2cbcV1K8PD1bNlfhFEaGLK?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Irrenhaus",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4SR46lHTitWMTzRTwsFIa6%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Harris
+  & Ford",
+      "Duration": "0:03:23",
+      "ItemId": "Q:0/68",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Irrenhaus",
+      "TrackUri": "x-sonos-spotify:spotify:track:4SR46lHTitWMTzRTwsFIa6?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "Passion",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2bm9eBd8hXPxEdgizCcEWX%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "twocolors",
+      "Duration": "0:02:45",
+      "ItemId": "Q:0/69",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "Passion",
+      "TrackUri": "x-sonos-spotify:spotify:track:2bm9eBd8hXPxEdgizCcEWX?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+    Object {
+      "Album": "We're Still
+  Young",
+      "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0ha2skoePlU0BDDySj8qf2%3fsid%3d9%26flags%3d8224%26sn%3d7",
+      "Artist": "Nicky
+  Romero",
+      "Duration": "0:03:15",
+      "ItemId": "Q:0/70",
+      "ParentId": "Q:0",
+      "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+      "Title": "We're
+  Still
+  Young",
+      "TrackUri": "x-sonos-spotify:spotify:track:0ha2skoePlU0BDDySj8qf2?sid=9&flags=8224&sn=7",
+      "UpnpClass": "object.item.audioItem.musicTrack",
+    },
+  ],
+  "TotalMatches": 70,
+  "UpdateID": 2,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) browse-radio-stations-audiobroadcast [browse] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "NumberReturned": 12,
+  "Result": Array [
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/20",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "100% NL 94.9 (Nederlands)",
+      "TrackUri": "x-sonosapi-stream:s78122?sid=254&flags=8224&sn=0",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/8",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "538",
+      "TrackUri": "x-sonosapi-stream:s6712?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/6",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "538 Party",
+      "TrackUri": "x-sonosapi-stream:s98497?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/10",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Q-Dance Hard",
+      "TrackUri": "x-sonosapi-stream:s106914?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/3",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Q-Music",
+      "TrackUri": "x-sonosapi-stream:s87683?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/16",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Q-Music Non Stop",
+      "TrackUri": "x-sonosapi-stream:s210431?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/7",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Radio 538 Dance Department",
+      "TrackUri": "x-sonosapi-stream:s75171?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/5",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Radio 538 Nonstop 40",
+      "TrackUri": "x-sonosapi-stream:s75166?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/4",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Sky Radio",
+      "TrackUri": "x-sonosapi-stream:s9067?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/19",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Slam hardstyle",
+      "TrackUri": "x-rincon-mp3radio://https://20423.live.streamtheworld.com/WEB11_MP3_SC?",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/11",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "SLAM!FM",
+      "TrackUri": "x-sonosapi-stream:s67814?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "R:0/0/12",
+      "ParentId": "R:0/0",
+      "ProtocolInfo": "x-rincon-mp3radio:*:*:*",
+      "Title": "Slam!Hardstyle",
+      "TrackUri": "x-sonosapi-stream:s155542?sid=254&flags=32",
+      "UpnpClass": "object.item.audioItem.audioBroadcast",
+    },
+  ],
+  "TotalMatches": 12,
+  "UpdateID": 1,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) browse-search-eminem-ampersand-titles [browse] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "NumberReturned": 15,
+  "Result": Array [
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%2050%20Cent%20%26%20Nate%20Dogg",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. 50 Cent & Nate Dogg",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. 50 Cent & Nate Dogg",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Bizarre",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Bizarre",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Bizarre",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20D12",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. D12",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. D12",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Dido",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Dido",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Dido",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Dr.%20Dre%20%26%2050%20Cent",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Dr. Dre & 50 Cent",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Dr. Dre & 50 Cent",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Dr.%20Dre,%20Snoop%20Dogg,%20Xzibit%20%26%20Nate%20Dogg",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Dr. Dre, Snoop Dogg, Xzibit & Nate Dogg",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Dr. Dre, Snoop Dogg, Xzibit & Nate Dogg",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Jamie%20N%20Commons",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Jamie N Commons",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Jamie N Commons",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Kendrick%20Lamar",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Kendrick Lamar",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Kendrick Lamar",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Nate%20Ruess",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Nate Ruess",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Nate Ruess",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Obie%20Trice,%20Stat%20Quo%20%26%2050%20Cent",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Obie Trice, Stat Quo & 50 Cent",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Obie Trice, Stat Quo & 50 Cent",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20RBX%20%26%20Sticky%20Fingaz",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. RBX & Sticky Fingaz",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. RBX & Sticky Fingaz",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Rihanna",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Rihanna",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Rihanna",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Sia",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Sia",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Sia",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+    Object {
+      "Album": undefined,
+      "AlbumArtUri": undefined,
+      "Artist": undefined,
+      "Duration": undefined,
+      "ItemId": "A:ARTIST/Eminem%20feat.%20Skylar%20Grey",
+      "ParentId": "A:ARTIST",
+      "ProtocolInfo": "x-rincon-playlist:*:*:*",
+      "Title": "Eminem feat. Skylar Grey",
+      "TrackUri": "x-rincon-playlist:RINCON_000E58644CBC01400#A:ARTIST/Eminem feat. Skylar Grey",
+      "UpnpClass": "object.container.person.musicArtist",
+    },
+  ],
+  "TotalMatches": 15,
+  "UpdateID": 0,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) didl-lite-raw-spotify-apostrophe [didl-lite] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "_xmlns": "urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/",
+  "_xmlns:dc": "http://purl.org/dc/elements/1.1/",
+  "_xmlns:r": "urn:schemas-rinconnetworks-com:metadata-1-0/",
+  "_xmlns:upnp": "urn:schemas-upnp-org:metadata-1-0/upnp/",
+  "item": Object {
+    "_id": "-1",
+    "_parentID": "-1",
+    "_restricted": "true",
+    "dc:creator": "Hurts",
+    "dc:title": "All I Want for Christmas Is New Year&apos;s Day",
+    "r:streamContent": "",
+    "res": Object {
+      "#text": "x-sonos-spotify:spotify%3atrack%3a6bblF1vFB4fFJYcvr63cBQ?sid=9&amp;flags=8224&amp;sn=7",
+      "_duration": "0:04:34",
+      "_protocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+    },
+    "upnp:album": "Happiness - Deluxe Edition",
+    "upnp:albumArtURI": "/getaa?s=1&amp;u=x-sonos-spotify%3aspotify%253atrack%253a6bblF1vFB4fFJYcvr63cBQ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+    "upnp:class": "object.item.audioItem.musicTrack",
+  },
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) didl-track-spotify-apostrophe [didl-track] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "Album": "Happiness - Deluxe Edition",
+  "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a6bblF1vFB4fFJYcvr63cBQ%3fsid%3d9%26flags%3d8224%26sn%3d7",
+  "Artist": "Hurts",
+  "Duration": "0:04:34",
+  "ItemId": "-1",
+  "ParentId": "-1",
+  "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+  "Title": "All I Want for Christmas Is New Year's Day",
+  "TrackUri": "x-sonos-spotify:spotify:track:6bblF1vFB4fFJYcvr63cBQ?sid=9&flags=8224&sn=7",
+  "UpnpClass": "object.item.audioItem.musicTrack",
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) didl-track-spotify-noizu [didl-track] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "Album": "Catch My Love",
+  "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a0C0LsZeUyAG50xJKEIpBgY%3fsid%3d9%26flags%3d8224%26sn%3d7",
+  "Artist": "Noizu",
+  "Duration": "0:02:28",
+  "ItemId": "-1",
+  "ParentId": "-1",
+  "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+  "Title": "Catch My Love",
+  "TrackUri": "x-sonos-spotify:spotify:track:0C0LsZeUyAG50xJKEIpBgY?sid=9&flags=8224&sn=7",
+  "UpnpClass": "object.item.audioItem.musicTrack",
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) event-avtransport-spotify-current-next [event] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "CurrentCrossfadeMode": false,
+  "CurrentPlayMode": "SHUFFLE",
+  "CurrentSection": 0,
+  "CurrentTrack": 47,
+  "CurrentTrackDuration": "0:03:24",
+  "CurrentTrackMetaData": Object {
+    "Album": "Survive (feat. Bram Boender)",
+    "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a2nj0bzqYZR7PXs0BoQTW3V%3fsid%3d9%26flags%3d8224%26sn%3d7",
+    "Artist": "Bass Modulators",
+    "Duration": "0:03:24",
+    "ItemId": "-1",
+    "ParentId": "-1",
+    "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+    "Title": "Survive",
+    "TrackUri": "x-sonos-spotify:spotify:track:2nj0bzqYZR7PXs0BoQTW3V?sid=9&flags=8224&sn=7",
+    "UpnpClass": "object.item.audioItem.musicTrack",
+  },
+  "CurrentTrackURI": "x-sonos-spotify:spotify%3atrack%3a2nj0bzqYZR7PXs0BoQTW3V?sid=9&amp;flags=8224&amp;sn=7",
+  "EnqueuedTransportURI": "x-rincon-cpcontainer:1006206cspotify%3aplaylist%3a04AfExnPMYJ0y6J6GW6QGa?sid=9&amp;flags=8300&amp;sn=7",
+  "EnqueuedTransportURIMetaData": Object {
+    "Album": undefined,
+    "AlbumArtUri": "https://i.scdn.co/image/ab67706c0000da84c064a0cba71066f9b99808ef",
+    "Artist": "spakenburger",
+    "Duration": undefined,
+    "ItemId": "1006206cspotify%3aplaylist%3a04AfExnPMYJ0y6J6GW6QGa",
+    "ParentId": "00020000playlist:hardstyle",
+    "ProtocolInfo": undefined,
+    "Title": "Hardstyle Everyday",
+    "TrackUri": undefined,
+    "UpnpClass": "object.container.playlistContainer",
+  },
+  "NextTrackMetaData": Object {
+    "Album": "Fine Day",
+    "AlbumArtUri": "http://sonos-test-host:1400/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a7aKme0bvekUFoMI0cHGIRk%3fsid%3d9%26flags%3d8224%26sn%3d7",
+    "Artist": "Coone",
+    "Duration": "0:03:56",
+    "ItemId": "-1",
+    "ParentId": "-1",
+    "ProtocolInfo": "sonos.com-spotify:*:audio/x-spotify:*",
+    "Title": "Fine Day",
+    "TrackUri": "x-sonos-spotify:spotify:track:7aKme0bvekUFoMI0cHGIRk?sid=9&flags=8224&sn=7",
+    "UpnpClass": "object.item.audioItem.musicTrack",
+  },
+  "NextTrackURI": "x-sonos-spotify:spotify%3atrack%3a7aKme0bvekUFoMI0cHGIRk?sid=9&amp;flags=8224&amp;sn=7",
+  "NumberOfTracks": 51,
+  "TransportState": "STOPPED",
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) event-device-properties-zoneattributes [event] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "AvailableRoomCalibration": "000E58644CBC01400_2.1.0.1_2017-04-14_15-09-44",
+  "BehindWifiExtender": 0,
+  "ChannelFreq": 2412,
+  "Configuration": 1,
+  "HTBondedZoneCommitState": 0,
+  "HasConfiguredSSID": false,
+  "Icon": "x-rincon-roomicon:office",
+  "Invisible": false,
+  "IsIdle": false,
+  "IsZoneBridge": false,
+  "LastChangedPlayState": "PLAYING,,,",
+  "Orientation": 0,
+  "RoomCalibrationState": 1,
+  "SecureRegState": 3,
+  "SettingsReplicationState": "RINCON_949F3E68DEA901400,45,RINCON_FFFFFFFFFFFF99999,0,RINCON_B8E9375A170401400,10,RINCON_B8E9375A170401400,1693,RINCON_B8E9378A0DDC01400,373,RINCON_B8E9378A0DDC01400,2690,RINCON_B8E9378A0DDC01400,990,RINCON_FFFFFFFFFFFF99999,0,RINCON_B8E9378A0DDC01400,8,RINCON_FFFFFFFFFFFF99999,0,RINCON_B8E9378A0DDC01400,49,RINCON_B8E9378A0DDC01400,16788,RINCON_000E58CE442C01400,7,RINCON_000E58644CBC01400,8,RINCON_000E58644CBC01400,0,RINCON_000E58644CBC01400,101",
+  "SupportsAudioClip": false,
+  "SupportsAudioIn": true,
+  "WifiEnabled": false,
+  "WirelessLeafOnly": false,
+  "WirelessMode": 0,
+  "ZoneName": "Kantoor",
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) event-queue-multiple-queueids [event] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "Curated": false,
+  "UpdateID": 2,
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) event-rendering-control-rcs [event] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "Bass": 0,
+  "HeadphoneConnected": false,
+  "Loudness": true,
+  "Mute": Object {
+    "LF": false,
+    "Master": false,
+    "RF": false,
+  },
+  "OutputFixed": false,
+  "PresetNameList": "FactoryDefaults",
+  "SpeakerSize": 3,
+  "SubCrossover": "0",
+  "SubEnabled": true,
+  "SubGain": "0",
+  "SubPolarity": "0",
+  "Treble": 0,
+  "Volume": Object {
+    "LF": 100,
+    "Master": 15,
+    "RF": 100,
+  },
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) music-available-services [music] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Array [
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 38,
+    "Name": "7digital",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos-pmap.ws.sonos.com/7digital_pmap.3.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos-service.7digital.com/stringtables.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonos-service.7digital.com/sonos.asmx",
+    "Uri": "http://sonos-service.7digital.com/sonos.asmx",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "2627",
+    "ContainerType": "MService",
+    "Id": 198,
+    "Name": "Anghami",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 90,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://phoenix.anghami.com/sonos/pmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://phoenix.anghami.com/sonos/strings_20150818.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://api.anghami.com/anghmob/SonosAPI.php",
+    "Uri": "https://api.anghami.com/anghmob/SonosAPI.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "3117633",
+    "ContainerType": "MService",
+    "Id": 204,
+    "Name": "Apple Music",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos-pmap.ws.sonos.com/applemusicbrand_pmap3.xml",
+        "Version": "22",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos-music.apple.com/xml/strings.xml",
+        "Version": "24",
+      },
+    },
+    "SecureUri": "https://sonos-music.apple.com/ws/SonosSoap",
+    "Uri": "https://sonos-music.apple.com/ws/SonosSoap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 275,
+    "Name": "ARTRADIO - RadioArt.com",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 100,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos.radioart.com/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.radioart.com/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.radioart.com/",
+    "Uri": "http://sonos.radioart.com/",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "1095249",
+    "ContainerType": "MService",
+    "Id": 239,
+    "Name": "Audible",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.audible.com/smapi/PresentationMap.xml",
+        "Version": "5",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.audible.com/smapi/strings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://sonos.audible.com/smapi",
+    "Uri": "https://sonos.audible.com/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4672",
+    "ContainerType": "MService",
+    "Id": 219,
+    "Name": "Audiobooks.com",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "http://www.audiobooks.com/sonos_service_strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://api.audiobooks.com/api/v2/sonos/soap",
+    "Uri": "https://api.audiobooks.com/api/v2/sonos/soap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 157,
+    "Name": "Bandcamp",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://bandcamp.com/api/sonos/2/sonos_presentationmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://bandcamp.com/api/sonos/2/sonos_stringtable.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sns.bandcamp.com/api/sonos/2/sonos_api",
+    "Uri": "http://sns.bandcamp.com/api/sonos/2/sonos_api",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "102976",
+    "ContainerType": "MService",
+    "Id": 283,
+    "Name": "Calm",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.calm.com/static/pm.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.calm.com/static/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://sonos.calm.com/server.php",
+    "Uri": "https://sonos.calm.com/server.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 144,
+    "Name": "Calm Radio",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "https://api.calmradio.com/sonos/strings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://api.calmradio.com/sonos/",
+    "Uri": "https://api.calmradio.com/sonos/",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "594496",
+    "ContainerType": "MService",
+    "Id": 256,
+    "Name": "CBC Radio &amp; Music",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 300,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://cbcmusic-sonos.azurewebsites.net/presentation_map.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://cbcmusic-sonos-beta.azurewebsites.net/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://cbcmusic-sonos-beta.azurewebsites.net/SonosService.svc",
+    "Uri": "http://cbcmusic-sonos-beta.azurewebsites.net/SonosService.svc",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "1030739",
+    "ContainerType": "MService",
+    "Id": 191,
+    "Name": "Classical Archives",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://api.classicalarchives.com/smapi/presentationmap.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "https://api.classicalarchives.com/smapi/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://api.classicalarchives.com/smapi/endpoint",
+    "Uri": "https://api.classicalarchives.com/smapi/endpoint",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 24,
+    "Name": "DAR.fm Record Radio",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "http://dar.fm/Sonos.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "http://dar.fm/SonosServer.php",
+    "Uri": "http://dar.fm/SonosServer.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "25180755",
+    "ContainerType": "MService",
+    "Id": 2,
+    "Name": "Deezer",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 300,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://files.deezer.com/xml/sonos_pmap.xml",
+        "Version": "15",
+      },
+      "Strings": Object {
+        "Uri": "http://files.deezer.com/xml/sonos_string_tables.xml",
+        "Version": "15",
+      },
+    },
+    "SecureUri": "https://api.deezer.com/sonos",
+    "Uri": "http://api.deezer.com/sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 234,
+    "Name": "deliver.media",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.deliver.media/static/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.deliver.media/static/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.deliver.media/musicservice",
+    "Uri": "http://sonos.deliver.media/musicservice",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "66048",
+    "ContainerType": "MService",
+    "Id": 285,
+    "Name": "Epidemic Spaces",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "https://storage.googleapis.com/spaces-assets/sonos/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://api.spaces.epidemicsound.com/sonos",
+    "Uri": "http://api.spaces.epidemicsound.com/sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "537153",
+    "ContainerType": "MService",
+    "Id": 182,
+    "Name": "FamilyStream",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://web.familystream.com/api/sonos_2.0/pmap.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "https://web.familystream.com/api/sonos_2.0/str.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://web.familystream.com/api/sonos_2.0.php",
+    "Uri": "http://web.familystream.com/api/sonos_2.0.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4610",
+    "ContainerType": "MService",
+    "Id": 217,
+    "Name": "FIT Radio Workout Music",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 120,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://www.fitradio.com/sonos/sonos_pmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://www.fitradio.com/sonos/sonos_str.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://www.fitradio.com/apisonos/ws",
+    "Uri": "https://www.fitradio.com/apisonos/ws",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "5632",
+    "ContainerType": "MService",
+    "Id": 192,
+    "Name": "focus@will",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://cdn-images.focusatwill.com/sonos/presentation_map.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "https://cdn-images.focusatwill.com/sonos/stringtable.xml",
+        "Version": "4",
+      },
+    },
+    "SecureUri": "https://www.focusatwill.com/sonos/action",
+    "Uri": "https://www.focusatwill.com/sonos/action",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "577",
+    "ContainerType": "MService",
+    "Id": 167,
+    "Name": "Gaana",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 200,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonosapi.gaana.com/resources/pmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://sonosapi.gaana.com/resources/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonosapi.gaana.com/SonosAPI.php",
+    "Uri": "https://sonosapi.gaana.com/SonosAPI.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "577",
+    "ContainerType": "MService",
+    "Id": 279,
+    "Name": "Global Player",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonoslb.radioapi.io/global/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonoslb.radioapi.io/global/stringtable.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonoslb.radioapi.io/global",
+    "Uri": "http://sonoslb.radioapi.io/global",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "98899",
+    "ContainerType": "MService",
+    "Id": 151,
+    "Name": "Google Play Music",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://www.gstatic.com/play/music/sonosfe/pmap.xml",
+        "Version": "15",
+      },
+      "Strings": Object {
+        "Uri": "https://mclients.googleapis.com/music/sonos/strings.xml",
+        "Version": "10",
+      },
+    },
+    "SecureUri": "https://mclients.googleapis.com/music/sonos/wsf/smapi",
+    "Uri": "https://mclients.googleapis.com/music/sonos/wsf/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 36,
+    "Name": "Hearts of Space",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 1200,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos-pmap.ws.sonos.com/hos_pmap.2.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.hos.com/DATA/StringResources1.2.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonos.hos.com/SOAP/Server1.2.php",
+    "Uri": "http://sonos.hos.com/SOAP/Server1.2.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "2579",
+    "ContainerType": "MService",
+    "Id": 224,
+    "Name": "HitsNL",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://external.unplug.de/sonos/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://external.unplug.de/sonos/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://external.unplug.de/8/sonos?ws=1",
+    "Uri": "https://external.unplug.de/8/sonos?ws=1",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 45,
+    "Name": "hotelradio.fm",
+    "Policy": Object {
+      "Auth": undefined,
+      "PollInterval": -1,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "https://users.hotelradio.fm/sonosapi/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://users.hotelradio.fm/sonosapi/index.php",
+    "Uri": "http://users.hotelradio.fm/sonosapi/index.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "602688",
+    "ContainerType": "MService",
+    "Id": 271,
+    "Name": "IDAGIO",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://idg-prod-sonos.herokuapp.com/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://idg-prod-sonos.herokuapp.com/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://idg-prod-sonos.herokuapp.com/smapi/action",
+    "Uri": "http://idg-prod-sonos.herokuapp.com/smapi/action",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "5050945",
+    "ContainerType": "MService",
+    "Id": 300,
+    "Manifest": Object {
+      "Uri": "https://mnfts.ws.sonos.com/p/juke.json",
+      "Version": "1",
+    },
+    "Name": "JUKE",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 120,
+    },
+    "SecureUri": "https://api-v3.talparad.io/sonos/SMAPI",
+    "Uri": "https://api-v3.talparad.io/sonos/SMAPI",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "627264",
+    "ContainerType": "SoundLab",
+    "Id": 305,
+    "Name": "Libby by OverDrive",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "https://libbysonos.overdrive.com/files/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://libbysonos.overdrive.com/soap",
+    "Uri": "https://libbysonos.overdrive.com/soap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "6675",
+    "ContainerType": "MService",
+    "Id": 221,
+    "Name": "LivePhish+",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.nugs.net/sample_pmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.nugs.net/sample_str.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonos.nugs.net/soap/livephish",
+    "Uri": "https://sonos.nugs.net/soap/livephish",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 260,
+    "Name": "Minidisco",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos.minidisco.nl/static/p.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.minidisco.nl/static/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.minidisco.nl/server.php",
+    "Uri": "http://sonos.minidisco.nl/server.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "2627",
+    "ContainerType": "MService",
+    "Id": 181,
+    "Name": "Mixcloud",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://www.mixcloud.com/sonos-app/presentation-map.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "https://www.mixcloud.com/sonos-app/strings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://www.mixcloud.com/sonos-app/",
+    "Uri": "https://www.mixcloud.com/sonos-app/",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4609",
+    "ContainerType": "MService",
+    "Id": 171,
+    "Name": "Mood Mix",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos.mix.moodmedia.com/presentation-map.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.mix.moodmedia.com/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonos.mix.moodmedia.com/api",
+    "Uri": "http://sonos.mix.moodmedia.com/api",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "33281",
+    "ContainerType": "MService",
+    "Id": 262,
+    "Name": "My Cloud Home",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.mycloud.com/static/presentationmap.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.mycloud.com/static/strings.xml",
+        "Version": "4",
+      },
+    },
+    "SecureUri": "https://sonos.mycloud.com/musicservice",
+    "Uri": "http://sonos.mycloud.com/musicservice",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 268,
+    "Name": "myTuner Radio",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://static.mytuner.mobi/static/sonos/pmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://static.mytuner.mobi/static/sonos/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.mytuner.mobi/api/v2/sonos/soap",
+    "Uri": "http://sonos.mytuner.mobi/api/v2/sonos/soap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "595",
+    "ContainerType": "MService",
+    "Id": 203,
+    "Name": "Napster",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://static.rhap.com/sonos-api/napster/service_pmap.4.xml",
+        "Version": "8",
+      },
+      "Strings": Object {
+        "Uri": "http://static.rhap.com/sonos-api/napster/service_strings.4.xml",
+        "Version": "7",
+      },
+    },
+    "SecureUri": "https://sonosapi-napster.rhapsody.com/smapi",
+    "Uri": "http://sonosapi-napster-ns.rhapsody.com/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "37377",
+    "ContainerType": "MService",
+    "Id": 277,
+    "Name": "NRK Radio",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://psapi.nrk.no/sonos/presentationmap.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "http://psapi.nrk.no/sonos/localization/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://psapi.nrk.no/sonos/sonos.svc",
+    "Uri": "http://psapi.nrk.no/sonos/sonos.svc",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 230,
+    "Name": "NTS Radio",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://www.nts.live/pmap2.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://www.nts.live/smapi-strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://www.nts.live/smapi",
+    "Uri": "http://www.nts.live/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "531027",
+    "ContainerType": "MService",
+    "Id": 222,
+    "Name": "nugs.net",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.nugs.net/sample_pmap.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.nugs.net/sample_str.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://sonos.nugs.net/soap/nugs",
+    "Uri": "https://sonos.nugs.net/soap/nugs",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "1937985",
+    "ContainerType": "MService",
+    "Id": 212,
+    "Name": "Plex",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.plex.tv/v2.2/plex.xml",
+        "Version": "5",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.plex.tv/v2.2/plexstrings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://sonos.plex.tv/v2.2/soap",
+    "Uri": "https://sonos.plex.tv/v2.2/soap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "1028672",
+    "ContainerType": "MService",
+    "Id": 233,
+    "Name": "Pocket Casts",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://integrations.pocketcasts.com/presentationmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://integrations.pocketcasts.com/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://integrations.pocketcasts.com/service/smapi",
+    "Uri": "http://integrations.pocketcasts.com/service/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 265,
+    "Name": "PowerApp",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 59,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://api.powergroup.com.tr/Sonos/PresentationMap/",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://api.powergroup.com.tr/Sonos/Strings/",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://api.powergroup.com.tr/Sonos/",
+    "Uri": "http://api.powergroup.com.tr/Sonos/",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "577",
+    "ContainerType": "MService",
+    "Id": 301,
+    "Name": "Primephonic",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos-api.primephonic.com/static/pm.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos-api.primephonic.com/static/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos-api.primephonic.com/server.php",
+    "Uri": "https://sonos-api.primephonic.com/server.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "10835",
+    "ContainerType": "MService",
+    "Id": 31,
+    "Name": "Qobuz",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 120,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://www.qobuz.com/sonos/0.3/presentationmap.xml",
+        "Version": "9",
+      },
+      "Strings": Object {
+        "Uri": "https://www.qobuz.com/sonos/0.3/stringtables.xml",
+        "Version": "8",
+      },
+    },
+    "SecureUri": "https://www.qobuz.com/api.xml/0.3/sonos",
+    "Uri": "http://www.qobuz.com/api.xml/0.3/sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "528897",
+    "ContainerType": "MService",
+    "Id": 294,
+    "Name": "Radio Javan",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://rjsonos.app/static/presentation_map.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://rjsonos.app/static/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://rjsonos.app/musicservice",
+    "Uri": "http://rjsonos.app/musicservice",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4198912",
+    "ContainerType": "SoundLab",
+    "Id": 308,
+    "Manifest": Object {
+      "Uri": "https://mnfts.ws.sonos.com/p/radioparadise.json",
+      "Version": "1",
+    },
+    "Name": "Radio Paradise",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 180,
+    },
+    "SecureUri": "https://api.radioparadise.com/sonos/soap/server.php",
+    "Uri": "http://api.radioparadise.com/sonos/soap/server.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "889409",
+    "ContainerType": "MService",
+    "Id": 264,
+    "Name": "radio.net",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://api.radio.de/sonos/v1/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://api.radio.de/sonos/v1/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://api.radio.de/sonos/v1/ws",
+    "Uri": "https://api.radio.de/sonos/v1/ws",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "0",
+    "ContainerType": "MService",
+    "Id": 154,
+    "Name": "Radionomy",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos-pmap.ws.sonos.com/reaper_pmap.xml",
+        "Version": "5",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos-str.ws.sonos.com/sonosReaper/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://reaper.ws.sonos.com/smapi",
+    "Uri": "https://reaper.ws.sonos.com/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 162,
+    "Name": "radioPup",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos.townsquaremedia.com/pmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.townsquaremedia.com/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.townsquaremedia.com/index.php",
+    "Uri": "http://sonos.townsquaremedia.com/index.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 223,
+    "Name": "RauteMusik.FM",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos-smapi.rautemusik.fm/static/presentationMap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos-smapi.rautemusik.fm/static/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos-smapi.rautemusik.fm/smapi",
+    "Uri": "http://sonos-smapi.rautemusik.fm/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4672",
+    "ContainerType": "MService",
+    "Id": 270,
+    "Name": "Relisten",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 1200,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.relisten.net/static/presentationmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.relisten.net/static/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.relisten.net/mp3",
+    "Uri": "https://sonos.relisten.net/mp3",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 150,
+    "Name": "RUSC",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos-pmap.ws.sonos.com/rusc_pmap.1.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "http://www.rusc.com/sonos.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://www.rusc.com/sonos.asmx",
+    "Uri": "http://www.rusc.com/sonos.asmx",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "12865",
+    "ContainerType": "MService",
+    "Id": 164,
+    "Name": "Saavn",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 120,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://www.saavn.com/apps/sonos/1.0/pmap.xml",
+        "Version": "5",
+      },
+      "Strings": Object {
+        "Uri": "http://www.saavn.com/apps/sonos/1.0/strings.xml",
+        "Version": "4",
+      },
+    },
+    "SecureUri": "https://www.saavn.com/apps/sonos/SonosAPI.php",
+    "Uri": "http://www.saavn.com/apps/sonos/SonosAPI.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4611",
+    "ContainerType": "MService",
+    "Id": 160,
+    "Name": "SoundCloud",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://soundcloud-static.ws.sonos.com/pmap.14.xml",
+        "Version": "14",
+      },
+      "Strings": Object {
+        "Uri": "http://soundcloud-static.ws.sonos.com/strings.3.xml",
+        "Version": "14",
+      },
+    },
+    "SecureUri": "https://soundcloud-go.ws.sonos.com/smapi",
+    "Uri": "https://soundcloud-go.ws.sonos.com/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 189,
+    "Name": "SOUNDMACHINE",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 120,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://provider.sound-machine.com/resources/sonospresmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://provider.sound-machine.com/resources/sonosstrings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://provider.sound-machine.com/sonosapi",
+    "Uri": "http://provider.sound-machine.com/sonosapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 218,
+    "Name": "Soundsuit.fm",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 1,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://soundsuit.fm/public/pmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "http://soundsuit.fm/public/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://soundsuit.fm/smapi",
+    "Uri": "http://soundsuit.fm/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "13632001",
+    "ContainerType": "MService",
+    "Id": 295,
+    "Manifest": Object {
+      "Uri": "https://mnfts.ws.sonos.com/p/syb.json",
+      "Version": "9",
+    },
+    "Name": "Soundtrack Player",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 60,
+    },
+    "SecureUri": "https://sms.soundtrackyourbrand.com/soap",
+    "Uri": "https://sms.soundtrackyourbrand.com/soap",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "5310995",
+    "ContainerType": "MService",
+    "Id": 9,
+    "Manifest": Object {
+      "Uri": "https://mnfts.ws.sonos.com/p/spotify-manifest.json",
+      "Version": "8",
+    },
+    "Name": "Spotify",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 300,
+    },
+    "SecureUri": "https://spotify-v5.ws.sonos.com/smapi",
+    "Uri": "https://spotify-v5.ws.sonos.com/smapi",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "513",
+    "ContainerType": "MService",
+    "Id": 163,
+    "Name": "Spreaker",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://www.spreaker.com/sonos/presentation_map.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://www.spreaker.com/sonos/string_table.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://sonos.spreaker.com/sonos/service/v1",
+    "Uri": "http://sonos.spreaker.com/sonos/service/v1",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "295427",
+    "ContainerType": "MService",
+    "Id": 184,
+    "Name": "Stingray Music",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://vip-resource.galaxie.ca/2/Sonos/XML/pm.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "http://vip-resource.galaxie.ca/2/Sonos/XML/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://sonos.stingray.com/ws/Sonos",
+    "Uri": "http://sonos.stingray.com/ws/Sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4675",
+    "ContainerType": "MService",
+    "Id": 13,
+    "Name": "Stitcher",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 60,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://stitcher.com/Service/Sonos/stitcher_pmap.xml",
+        "Version": "10",
+      },
+      "Strings": Object {
+        "Uri": "https://stitcher.com/Service/Sonos/stitcher_string.xml",
+        "Version": "4",
+      },
+    },
+    "SecureUri": "https://stitcher.com/Service/Sonos/Sonos.php",
+    "Uri": "https://stitcher.com/Service/Sonos/Sonos.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "328193",
+    "ContainerType": "MService",
+    "Id": 237,
+    "Name": "storePlay",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://api.storeplay.com.au/sonos/Presentation.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://api.storeplay.com.au/sonos/Strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://api.storeplay.com.au/sonos/SonosService.asmx",
+    "Uri": "http://api.storeplay.com.au/sonos/SonosService.asmx",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "636481",
+    "ContainerType": "MService",
+    "Id": 226,
+    "Name": "Storytel",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonosapi.storytel.com/sonos-static/1.0/pm.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://sonosapi.storytel.com/sonos-static/1.0/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonosapi.storytel.com/sonos/1.0",
+    "Uri": "http://sonosapi.storytel.com/sonos/1.0",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "70145",
+    "ContainerType": "MService",
+    "Id": 235,
+    "Name": "Sveriges Radio",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://sonos.playsr.com/assets/presentationmap.xml",
+        "Version": "2",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos.playsr.com/assets/strings.xml",
+        "Version": "2",
+      },
+    },
+    "SecureUri": "https://sonos.playsr.com/ws",
+    "Uri": "https://sonos.playsr.com/ws",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "515",
+    "ContainerType": "MService",
+    "Id": 211,
+    "Name": "The Music Manager",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://themusicmanager.eu/sonos/pmap.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "http://themusicmanager.eu/sonos/lan_str.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://themusicmanager.eu/sonos/SonosAPI.php",
+    "Uri": "http://themusicmanager.eu/sonos/SonosAPI.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "47699",
+    "ContainerType": "MService",
+    "Id": 174,
+    "Name": "TIDAL",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://smapi.tidal.com/assets/xml/presentation.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "https://smapi.tidal.com/assets/xml/strings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://smapi.tidal.com/sonos",
+    "Uri": "https://smapi.tidal.com/sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4672",
+    "ContainerType": "MService",
+    "Id": 169,
+    "Name": "Tribe of Noise",
+    "Policy": Object {
+      "Auth": "DeviceLink",
+      "PollInterval": 3600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://sonos.tribeofnoise.com/presentation_map.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "http://sonos.tribeofnoise.com/strings.xml",
+        "Version": "5",
+      },
+    },
+    "SecureUri": "https://sonos.tribeofnoise.com/server-v2.1.php",
+    "Uri": "http://sonos.tribeofnoise.com/server-v2.1.php",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "4161",
+    "ContainerType": "MService",
+    "Id": 254,
+    "Name": "TuneIn",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 0,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://opml.radiotime.com/assets/sonos/map.xml",
+        "Version": "4",
+      },
+      "Strings": Object {
+        "Uri": "https://sonos-str.ws.sonos.com/TuneIn/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://legato.radiotime.com/Radio.asmx",
+    "Uri": "https://legato.radiotime.com/Radio.asmx",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "8769",
+    "ContainerType": "MService",
+    "Id": 193,
+    "Name": "Tunify for Business",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "http://api.tunify.com/Sonos/static/pm.xml",
+        "Version": "3",
+      },
+      "Strings": Object {
+        "Uri": "http://api.tunify.com/Sonos/static/strings.xml",
+        "Version": "3",
+      },
+    },
+    "SecureUri": "https://api.tunify.com/Sonos/services/Sonos?wsdl",
+    "Uri": "http://api.tunify.com/Sonos/services/Sonos?wsdl",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "537153",
+    "ContainerType": "MService",
+    "Id": 231,
+    "Name": "Wolfgang&apos;s Music",
+    "Policy": Object {
+      "Auth": "UserId",
+      "PollInterval": 600,
+    },
+    "Presentation": Object {
+      "PresentationMap": Object {
+        "Uri": "https://moapi.wolfgangs.com/ws/pmap-wolfgangs.xml",
+        "Version": "1",
+      },
+      "Strings": Object {
+        "Uri": "https://moapi.wolfgangs.com/ws/stringtable-wolfgangs.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://moapi.wolfgangs.com/ws/wolfgangs.asmx",
+    "Uri": "https://moapi.wolfgangs.com/ws/wolfgangs.asmx",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "512",
+    "ContainerType": "MService",
+    "Id": 272,
+    "Name": "Worldwide FM",
+    "Policy": Object {
+      "Auth": "Anonymous",
+      "PollInterval": 30,
+    },
+    "Presentation": Object {
+      "Strings": Object {
+        "Uri": "https://wwfm-sonos.nextempire.net/strings.xml",
+        "Version": "1",
+      },
+    },
+    "SecureUri": "https://wwfm-sonos.nextempire.net/sonos",
+    "Uri": "http://wwfm-sonos.nextempire.net/sonos",
+    "Version": "1.1",
+  },
+  Object {
+    "Capabilities": "32473609",
+    "ContainerType": "MService",
+    "Id": 284,
+    "Manifest": Object {
+      "Uri": "https://mnfts.ws.sonos.com/p/ytm.json",
+      "Version": "10",
+    },
+    "Name": "YouTube Music",
+    "Policy": Object {
+      "Auth": "AppLink",
+      "PollInterval": 900,
+    },
+    "SecureUri": "https://music.googleapis.com/v1:sendRequest",
+    "Uri": "https://music.googleapis.com/v1:sendRequest",
+    "Version": "1.1",
+  },
+]
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) soap-device-description [soap] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Object {
+  "?xml": "",
+  "root": Object {
+    "device": Object {
+      "#text": "#DEACTIVATION_STATE_TAG_AND_VALUE#
+    #DEACTIVATION_TTL_TAG_AND_VALUE#
+    #DEACTIVATION_DATE_TIME_TAG_AND_VALUE#",
+      "MACAddress": "94:9F:00:68:00:A9",
+      "UDN": "uuid:RINCON_949F0000A901400",
+      "ampOnTime": 425,
+      "apiVersion": "1.18.9",
+      "bassExtension": 50,
+      "deviceList": Object {
+        "device": Array [
+          Object {
+            "UDN": "uuid:RINCON_949F006800A901400_MS",
+            "deviceType": "urn:schemas-upnp-org:device:MediaServer:1",
+            "friendlyName": "192.168.96.57 - Sonos Playbar Media Server",
+            "manufacturer": "Sonos, Inc.",
+            "manufacturerURL": "http://www.sonos.com",
+            "modelDescription": "Sonos Playbar Media Server",
+            "modelName": "Sonos Playbar",
+            "modelNumber": "S9",
+            "modelURL": "http://www.sonos.com/products/zoneplayers/S9",
+            "serviceList": Object {
+              "service": Array [
+                Object {
+                  "SCPDURL": "/xml/ContentDirectory1.xml",
+                  "controlURL": "/MediaServer/ContentDirectory/Control",
+                  "eventSubURL": "/MediaServer/ContentDirectory/Event",
+                  "serviceId": "urn:upnp-org:serviceId:ContentDirectory",
+                  "serviceType": "urn:schemas-upnp-org:service:ContentDirectory:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/ConnectionManager1.xml",
+                  "controlURL": "/MediaServer/ConnectionManager/Control",
+                  "eventSubURL": "/MediaServer/ConnectionManager/Event",
+                  "serviceId": "urn:upnp-org:serviceId:ConnectionManager",
+                  "serviceType": "urn:schemas-upnp-org:service:ConnectionManager:1",
+                },
+              ],
+            },
+          },
+          Object {
+            "UDN": "uuid:RINCON_949F006800A901400_MR",
+            "X_Rhapsody-Extension": Object {
+              "deviceCapabilities": Object {
+                "interactionPattern": "",
+              },
+              "deviceID": "urn:rhapsody-real-com:device-id-1-0:sonos_1:RINCON_949F006800A901400",
+            },
+            "deviceType": "urn:schemas-upnp-org:device:MediaRenderer:1",
+            "friendlyName": "TV - Sonos Playbar Media Renderer",
+            "iconList": Object {
+              "icon": Object {
+                "depth": 24,
+                "height": 48,
+                "mimetype": "image/png",
+                "url": "/img/icon-S9.png",
+                "width": 48,
+              },
+            },
+            "manufacturer": "Sonos, Inc.",
+            "manufacturerURL": "http://www.sonos.com",
+            "modelDescription": "Sonos Playbar Media Renderer",
+            "modelName": "Sonos Playbar",
+            "modelNumber": "S9",
+            "modelURL": "http://www.sonos.com/products/zoneplayers/S9",
+            "qq:X_QPlay_SoftwareCapability": "QPlay:2",
+            "serviceList": Object {
+              "service": Array [
+                Object {
+                  "SCPDURL": "/xml/RenderingControl1.xml",
+                  "controlURL": "/MediaRenderer/RenderingControl/Control",
+                  "eventSubURL": "/MediaRenderer/RenderingControl/Event",
+                  "serviceId": "urn:upnp-org:serviceId:RenderingControl",
+                  "serviceType": "urn:schemas-upnp-org:service:RenderingControl:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/ConnectionManager1.xml",
+                  "controlURL": "/MediaRenderer/ConnectionManager/Control",
+                  "eventSubURL": "/MediaRenderer/ConnectionManager/Event",
+                  "serviceId": "urn:upnp-org:serviceId:ConnectionManager",
+                  "serviceType": "urn:schemas-upnp-org:service:ConnectionManager:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/AVTransport1.xml",
+                  "controlURL": "/MediaRenderer/AVTransport/Control",
+                  "eventSubURL": "/MediaRenderer/AVTransport/Event",
+                  "serviceId": "urn:upnp-org:serviceId:AVTransport",
+                  "serviceType": "urn:schemas-upnp-org:service:AVTransport:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/Queue1.xml",
+                  "controlURL": "/MediaRenderer/Queue/Control",
+                  "eventSubURL": "/MediaRenderer/Queue/Event",
+                  "serviceId": "urn:sonos-com:serviceId:Queue",
+                  "serviceType": "urn:schemas-sonos-com:service:Queue:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/GroupRenderingControl1.xml",
+                  "controlURL": "/MediaRenderer/GroupRenderingControl/Control",
+                  "eventSubURL": "/MediaRenderer/GroupRenderingControl/Event",
+                  "serviceId": "urn:upnp-org:serviceId:GroupRenderingControl",
+                  "serviceType": "urn:schemas-upnp-org:service:GroupRenderingControl:1",
+                },
+                Object {
+                  "SCPDURL": "/xml/VirtualLineIn1.xml",
+                  "controlURL": "/MediaRenderer/VirtualLineIn/Control",
+                  "eventSubURL": "/MediaRenderer/VirtualLineIn/Event",
+                  "serviceId": "urn:upnp-org:serviceId:VirtualLineIn",
+                  "serviceType": "urn:schemas-upnp-org:service:VirtualLineIn:1",
+                },
+              ],
+            },
+          },
+        ],
+      },
+      "deviceType": "urn:schemas-upnp-org:device:ZonePlayer:1",
+      "displayName": "Playbar",
+      "displayVersion": "11.2.4",
+      "extraVersion": "OTP:",
+      "feature1": 32768,
+      "feature2": 807430002,
+      "feature3": 200712,
+      "flash": 128,
+      "friendlyName": "192.168.10.11 - Sonos Playbar",
+      "hardwareVersion": "1.9.1.10-2.2",
+      "iconList": Object {
+        "icon": Object {
+          "depth": 24,
+          "height": 48,
+          "id": 0,
+          "mimetype": "image/png",
+          "url": "/img/icon-S9.png",
+          "width": 48,
+        },
+      },
+      "internalSpeakerSize": 6,
+      "legacyCompatibleVersion": "36.0-00000",
+      "manufacturer": "Sonos, Inc.",
+      "manufacturerURL": "http://www.sonos.com",
+      "memory": 128,
+      "minApiVersion": "1.1.0",
+      "minCompatibleVersion": "56.0-00000",
+      "modelDescription": "Sonos Playbar",
+      "modelName": "Sonos Playbar",
+      "modelNumber": "S9",
+      "modelURL": "http://www.sonos.com/products/zoneplayers/S9",
+      "retailMode": 0,
+      "roomName": "TV",
+      "satGainOffset": 0,
+      "serialNum": "94-9F-00-68-00-A9:D",
+      "seriesid": "A100",
+      "serviceList": Object {
+        "service": Array [
+          Object {
+            "SCPDURL": "/xml/AlarmClock1.xml",
+            "controlURL": "/AlarmClock/Control",
+            "eventSubURL": "/AlarmClock/Event",
+            "serviceId": "urn:upnp-org:serviceId:AlarmClock",
+            "serviceType": "urn:schemas-upnp-org:service:AlarmClock:1",
+          },
+          Object {
+            "SCPDURL": "/xml/MusicServices1.xml",
+            "controlURL": "/MusicServices/Control",
+            "eventSubURL": "/MusicServices/Event",
+            "serviceId": "urn:upnp-org:serviceId:MusicServices",
+            "serviceType": "urn:schemas-upnp-org:service:MusicServices:1",
+          },
+          Object {
+            "SCPDURL": "/xml/DeviceProperties1.xml",
+            "controlURL": "/DeviceProperties/Control",
+            "eventSubURL": "/DeviceProperties/Event",
+            "serviceId": "urn:upnp-org:serviceId:DeviceProperties",
+            "serviceType": "urn:schemas-upnp-org:service:DeviceProperties:1",
+          },
+          Object {
+            "SCPDURL": "/xml/SystemProperties1.xml",
+            "controlURL": "/SystemProperties/Control",
+            "eventSubURL": "/SystemProperties/Event",
+            "serviceId": "urn:upnp-org:serviceId:SystemProperties",
+            "serviceType": "urn:schemas-upnp-org:service:SystemProperties:1",
+          },
+          Object {
+            "SCPDURL": "/xml/ZoneGroupTopology1.xml",
+            "controlURL": "/ZoneGroupTopology/Control",
+            "eventSubURL": "/ZoneGroupTopology/Event",
+            "serviceId": "urn:upnp-org:serviceId:ZoneGroupTopology",
+            "serviceType": "urn:schemas-upnp-org:service:ZoneGroupTopology:1",
+          },
+          Object {
+            "SCPDURL": "/xml/GroupManagement1.xml",
+            "controlURL": "/GroupManagement/Control",
+            "eventSubURL": "/GroupManagement/Event",
+            "serviceId": "urn:upnp-org:serviceId:GroupManagement",
+            "serviceType": "urn:schemas-upnp-org:service:GroupManagement:1",
+          },
+          Object {
+            "SCPDURL": "/xml/HTControl1.xml",
+            "controlURL": "/HTControl/Control",
+            "eventSubURL": "/HTControl/Event",
+            "serviceId": "urn:upnp-org:serviceId:HTControl",
+            "serviceType": "urn:schemas-upnp-org:service:HTControl:1",
+          },
+          Object {
+            "SCPDURL": "/xml/QPlay1.xml",
+            "controlURL": "/QPlay/Control",
+            "eventSubURL": "/QPlay/Event",
+            "serviceId": "urn:tencent-com:serviceId:QPlay",
+            "serviceType": "urn:schemas-tencent-com:service:QPlay:1",
+          },
+        ],
+      },
+      "softwareVersion": "57.4-83220",
+      "swGen": 1,
+      "variant": 2,
+      "zoneType": 10,
+    },
+    "specVersion": Object {
+      "major": 1,
+      "minor": 0,
+    },
+  },
+}
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) zgt-channelmap-two-zones [zgt] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Array [
+  Object {
+    "coordinator": Object {
+      "ChannelMapSet": undefined,
+      "HasConfiguredSSID": false,
+      "HdmiCecAvailable": false,
+      "Icon": "x-rincon-roomicon:kitchen",
+      "Invisible": false,
+      "MicEnabled": false,
+      "SoftwareVersion": "60.3-81140",
+      "SwGen": "2",
+      "TVConfigurationError": 0,
+      "WifiEnabled": false,
+      "host": "192.168.1.21",
+      "name": "Kitchen",
+      "port": 1400,
+      "uuid": "RINCON_FFFFFFFFFFFFFFFF0",
+    },
+    "groupId": "RINCON_FFFFFFFFFFFFFFFF0:123456789",
+    "members": Array [
+      Object {
+        "ChannelMapSet": undefined,
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:kitchen",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "60.3-81140",
+        "SwGen": "2",
+        "TVConfigurationError": 0,
+        "WifiEnabled": false,
+        "host": "192.168.1.21",
+        "name": "Kitchen",
+        "port": 1400,
+        "uuid": "RINCON_FFFFFFFFFFFFFFFF0",
+      },
+      Object {
+        "ChannelMapSet": undefined,
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:living",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "60.3-81140",
+        "SwGen": "2",
+        "TVConfigurationError": 0,
+        "WifiEnabled": false,
+        "host": "192.168.1.22",
+        "name": "Living Room",
+        "port": 1400,
+        "uuid": "RINCON_FFFFFFFF000000000",
+      },
+    ],
+    "name": "Kitchen + 1",
+  },
+]
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) zgt-normal-three-members [zgt] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Array [
+  Object {
+    "coordinator": Object {
+      "ChannelMapSet": undefined,
+      "HasConfiguredSSID": false,
+      "HdmiCecAvailable": false,
+      "Icon": "x-rincon-roomicon:kitchen",
+      "Invisible": false,
+      "MicEnabled": false,
+      "SoftwareVersion": "55.1-74250",
+      "SwGen": "1",
+      "TVConfigurationError": 0,
+      "WifiEnabled": true,
+      "host": "192.168.1.20",
+      "name": "Keuken",
+      "port": 1400,
+      "uuid": "RINCON_000FFFFFF42C01400",
+    },
+    "groupId": "RINCON_000FFFFFF42C01400:63",
+    "members": Array [
+      Object {
+        "ChannelMapSet": undefined,
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:kitchen",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "55.1-74250",
+        "SwGen": "1",
+        "TVConfigurationError": 0,
+        "WifiEnabled": true,
+        "host": "192.168.1.20",
+        "name": "Keuken",
+        "port": 1400,
+        "uuid": "RINCON_000FFFFFF42C01400",
+      },
+      Object {
+        "ChannelMapSet": undefined,
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:living",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "55.1-74250",
+        "SwGen": "1",
+        "TVConfigurationError": 0,
+        "WifiEnabled": true,
+        "host": "192.168.1.21",
+        "name": "TV",
+        "port": 1400,
+        "uuid": "RINCON_000FFFFFF4AA01400",
+      },
+      Object {
+        "ChannelMapSet": undefined,
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:dining",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "55.1-74250",
+        "SwGen": "1",
+        "TVConfigurationError": 0,
+        "WifiEnabled": true,
+        "host": "192.168.1.22",
+        "name": "Eetkamer",
+        "port": 1400,
+        "uuid": "RINCON_000FFFFFF4CC01400",
+      },
+    ],
+    "name": "Keuken + 2",
+  },
+]
+`;
+
+exports[`firmware-tripwire: captured-payload corpus (fast-xml-parser v4 baseline) zgt-stereo-bonded-pair [zgt] parses to a stable v4 snapshot with no coercion drift 1`] = `
+Array [
+  Object {
+    "coordinator": Object {
+      "ChannelMapSet": Object {
+        "LF": "RINCON_FFFFFFFFFFFFFFFF0",
+        "RF": "RINCON_FFFFFFFFF0000FFF0",
+      },
+      "HasConfiguredSSID": false,
+      "HdmiCecAvailable": false,
+      "Icon": "x-rincon-roomicon:living",
+      "Invisible": false,
+      "MicEnabled": false,
+      "SoftwareVersion": "60.3-81140",
+      "SwGen": "2",
+      "TVConfigurationError": 0,
+      "WifiEnabled": false,
+      "host": "192.168.1.21",
+      "name": "Office",
+      "port": 1400,
+      "uuid": "RINCON_FFFFFFFFFFFFFFFF0",
+    },
+    "groupId": "RINCON_FFFFFFFFFFFFFFFF0:123456789",
+    "members": Array [
+      Object {
+        "ChannelMapSet": Object {
+          "LF": "RINCON_FFFFFFFFFFFFFFFF0",
+          "RF": "RINCON_FFFFFFFFF0000FFF0",
+        },
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:living",
+        "Invisible": true,
+        "MicEnabled": false,
+        "SoftwareVersion": "60.3-81140",
+        "SwGen": "2",
+        "TVConfigurationError": 0,
+        "WifiEnabled": false,
+        "host": "192.168.1.22",
+        "name": "Office",
+        "port": 1400,
+        "uuid": "RINCON_FFFFFFFFF0000FFF0",
+      },
+      Object {
+        "ChannelMapSet": Object {
+          "LF": "RINCON_FFFFFFFFFFFFFFFF0",
+          "RF": "RINCON_FFFFFFFFF0000FFF0",
+        },
+        "HasConfiguredSSID": false,
+        "HdmiCecAvailable": false,
+        "Icon": "x-rincon-roomicon:living",
+        "Invisible": false,
+        "MicEnabled": false,
+        "SoftwareVersion": "60.3-81140",
+        "SwGen": "2",
+        "TVConfigurationError": 0,
+        "WifiEnabled": false,
+        "host": "192.168.1.21",
+        "name": "Office",
+        "port": 1400,
+        "uuid": "RINCON_FFFFFFFFFFFFFFFF0",
+      },
+    ],
+    "name": "Office + 1",
+  },
+]
+`;
