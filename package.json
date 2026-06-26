@@ -11,6 +11,7 @@
     "lint-fix": "eslint ./src/*.ts ./src/**/*.ts --fix",
     "lint": "eslint ./src/*.ts ./src/**/*.ts",
     "prepack": "npm run build",
+    "prepare": "npm run build",
     "serve-docs": "docker-compose -f ./docs/docker-compose.yml up jekyll",
     "test": "npm run lint && jest --forceExit"
   },
