@@ -372,6 +372,14 @@ export default abstract class BaseService <TServiceEvent> {
   private eventRenewInterval?: NodeJS.Timeout;
 
   /**
+   * True once we have entered the stalled state (a renew failed and we are rotating the SID),
+   * cleared again on actual recovery. Makes SubscriptionStalled an edge signal: it fires once
+   * on entry into a stall, not once per 150s renew tick while a speaker stays down, so a
+   * consumer logging it verbatim sees one line per outage, not one per tick.
+   */
+  private wasStalled = false;
+
+  /**
    * Timestamp (ms) of the most recent NOTIFY delivered for this service, stamped by the
    * listener (the single point every NOTIFY passes through). Undefined until the first
    * NOTIFY lands after a (re)subscribe.
@@ -567,7 +575,10 @@ export default abstract class BaseService <TServiceEvent> {
    *   meaning of the renew return value.
    */
   private async resubscribeFresh(): Promise<boolean> {
-    this.emitOnChannel(ServiceEvents.SubscriptionStalled, new EventsError(EventsErrorCode.SubscriptionStalled));
+    if (!this.wasStalled) {
+      this.wasStalled = true;
+      this.emitOnChannel(ServiceEvents.SubscriptionStalled, new EventsError(EventsErrorCode.SubscriptionStalled));
+    }
     const oldSid = this.sid;
     await this.ResolveHostname();
 
@@ -591,6 +602,7 @@ export default abstract class BaseService <TServiceEvent> {
     await this.subscribeForEvents();
     if (this.sid !== undefined && this.sid !== oldSid) {
       this.debug('Resubscribed fresh, new SID %s (was %s)', this.sid, oldSid);
+      this.wasStalled = false;
       this.emitOnChannel(ServiceEvents.SubscriptionRecovered, new EventsError(EventsErrorCode.SubscriptionRecovered));
     }
     return this.sid !== undefined;
@@ -606,6 +618,9 @@ export default abstract class BaseService <TServiceEvent> {
     this.debug('Cancelling event subscription');
     if (this.eventRenewInterval !== undefined) {
       clearInterval(this.eventRenewInterval);
+      // Clear the handle so a later re-subscribe (cancel->resubscribe cycle) restarts the
+      // renew loop; subscribeForEvents only arms a new interval when this is undefined.
+      this.eventRenewInterval = undefined;
     }
 
     if (this.sid !== undefined) {
