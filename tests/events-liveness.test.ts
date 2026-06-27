@@ -347,6 +347,55 @@ describe('SonosDevice - Events liveness', () => {
     await TestHelpers.waitUntil(() => !SonosEventListener.DefaultInstance.GetSubscriptions().some((s) => s.sid === sidB));
   }, 5000);
 
+  it('two concurrent renews collapse to ONE resubscribe — no duplicate/orphaned SID', async () => {
+    // Reentrancy guard: the lib's internal renew interval and a caller's CheckEventListener()
+    // can both invoke renewEventSubscription on the same stale service within ms during an
+    // outage. Without the in-flight guard each runs resubscribeFresh() and registers its own
+    // SID while this.sid holds only the last — orphaning the other in the listener map (it
+    // gets NOTIFYs, never renewed/unsubscribed). The guard collapses both onto one renew.
+    //
+    // Exactly ONE 412 renew and ONE fresh SUBSCRIBE are intercepted: if the guard failed, the
+    // second renew would re-run resubscribeFresh, hit no interceptor (500/throw), and register
+    // a second SID. We assert exactly one SID registered and both callers saw the same result.
+    const port = 2110;
+    const scope = TestHelpers.getScope(port);
+    const sidA = randomUUID();
+    const sidB = randomUUID();
+
+    scope
+      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { nt: 'upnp:event' } })
+      .reply(200, '', { sid: sidA });
+    scope
+      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: sidA, Timeout: 'Second-300' } })
+      .reply(412, '');
+    scope
+      .intercept('/MediaRenderer/AVTransport/Event', 'UNSUBSCRIBE', undefined, { reqheaders: { sid: sidA } })
+      .reply(204, '');
+    scope
+      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { nt: 'upnp:event' } })
+      .reply(200, '', { sid: sidB });
+
+    const device = new SonosDevice(TestHelpers.testHost, port, randomUUID());
+    const serviceUuid = device.AVTransportService.Uuid;
+    device.AVTransportService.Events.on('serviceEvent', () => { });
+    await TestHelpers.waitUntil(() => SonosEventListener.DefaultInstance.GetStatus().currentSubscriptions.some((s) => s.sid === sidA));
+
+    const renewTick = () => (device.AVTransportService as unknown as { renewEventSubscription(): Promise<boolean> }).renewEventSubscription();
+    // Fire both renews in the SAME tick — they must share one in-flight promise.
+    const [a, b] = await Promise.all([renewTick(), renewTick()]);
+
+    expect(a, 'both concurrent callers see a live subscription').to.be.true;
+    expect(b, 'both concurrent callers see a live subscription').to.be.true;
+
+    const subs = SonosEventListener.DefaultInstance.GetSubscriptions();
+    expect(subs.filter((s) => s.sid === sidB).length, 'exactly ONE new SID-B registered (no orphan)').to.equal(1);
+    expect(subs.some((s) => s.sid === sidA), 'old SID-A is gone').to.be.false;
+    // The orphan signature: a duplicate resubscribe would register a 2nd SID for the SAME
+    // service uuid. Exactly one entry must carry this service's uuid.
+    expect(subs.filter((s) => s.uuid === serviceUuid).length, 'service registered under exactly one SID (no orphan)').to.equal(1);
+    expect(scope.isDone(), 'exactly one renew + one UNSUBSCRIBE + one fresh SUBSCRIBE fired').to.be.true;
+  }, 5000);
+
   it('recovered subscription resumes delivering NOTIFYs to the new SID', async () => {
     const port = 2104;
     const scope = TestHelpers.getScope(port);

@@ -372,6 +372,17 @@ export default abstract class BaseService <TServiceEvent> {
   private eventRenewInterval?: NodeJS.Timeout;
 
   /**
+   * In-flight renew/resubscribe, used as a reentrancy guard. The lib's internal renew
+   * interval and a caller's CheckEventListener() can both invoke renewEventSubscription on
+   * the same service; if they align during an outage, two concurrent resubscribeFresh() runs
+   * would each SUBSCRIBE and register a distinct SID while this.sid holds only the last one,
+   * orphaning the other in the listener map (it receives NOTIFYs but is never renewed or
+   * unsubscribed until its TTL lapses). A single shared promise collapses concurrent calls
+   * onto one renew.
+   */
+  private renewing?: Promise<boolean>;
+
+  /**
    * True once we have entered the stalled state (a renew failed and we are rotating the SID),
    * cleared again on actual recovery. Makes SubscriptionStalled an edge signal: it fires once
    * on entry into a stall, not once per 150s renew tick while a speaker stays down, so a
@@ -532,7 +543,20 @@ export default abstract class BaseService <TServiceEvent> {
    * @private
    * @remarks Do not call manually!!
    */
-  private async renewEventSubscription(): Promise<boolean> {
+  private renewEventSubscription(): Promise<boolean> {
+    // Reentrancy guard: if a renew/resubscribe is already running, every concurrent caller
+    // (the internal interval + CheckEventListener) shares that one promise instead of starting
+    // a second resubscribe that would orphan a duplicate SID in the listener map.
+    if (this.renewing !== undefined) {
+      this.debug('Renew already in flight, joining existing renew');
+      return this.renewing;
+    }
+    this.renewing = this.doRenewEventSubscription()
+      .finally(() => { this.renewing = undefined; });
+    return this.renewing;
+  }
+
+  private async doRenewEventSubscription(): Promise<boolean> {
     this.debug('Renewing event subscription');
     await this.ResolveHostname();
     if (typeof this.sid === 'string' && this.sid !== '') {
@@ -583,29 +607,44 @@ export default abstract class BaseService <TServiceEvent> {
     await this.ResolveHostname();
 
     if (typeof oldSid === 'string' && oldSid !== '') {
-      try {
-        await fetch(new Request(
-          `http://${this.resolvedIp ?? this.host}:${this.port}${this.eventSubUrl}`,
-          {
-            method: 'UNSUBSCRIBE',
-            headers: { SID: oldSid },
-            signal: AbortSignal.timeout(15000),
-          },
-        ));
-      } catch (err) {
-        this.debug('Best-effort UNSUBSCRIBE of stale SID %s failed (ignored): %o', oldSid, err);
-      }
+      // Best-effort UNSUBSCRIBE of the old SID, fired WITHOUT awaiting: against an unreachable
+      // speaker an awaited UNSUBSCRIBE burns up to its full 15s timeout before the fresh
+      // SUBSCRIBE even starts, serializing each failed heal tick (~30s worst case). The speaker
+      // has already dropped/rejected the SID (that's why we're here), so the result is moot —
+      // we drop it from the listener immediately and let the request settle in the background.
+      this.bestEffortUnsubscribe(oldSid);
       SonosEventListener.DefaultInstance.UnregisterSubscription(oldSid);
       this.sid = undefined;
     }
 
     await this.subscribeForEvents();
-    if (this.sid !== undefined && this.sid !== oldSid) {
+    // Recover on any usable SID after the fresh subscribe (not only when it differs from oldSid):
+    // a healthy speaker always issues a fresh GUID, but clearing on presence alone means a
+    // (theoretical) identical re-issued SID still re-arms wasStalled instead of leaving it set.
+    if (this.sid !== undefined && this.wasStalled) {
       this.debug('Resubscribed fresh, new SID %s (was %s)', this.sid, oldSid);
       this.wasStalled = false;
       this.emitOnChannel(ServiceEvents.SubscriptionRecovered, new EventsError(EventsErrorCode.SubscriptionRecovered));
     }
     return this.sid !== undefined;
+  }
+
+  /**
+   * Fire-and-forget UNSUBSCRIBE of a stale SID. Not awaited by the caller so a dead speaker's
+   * timeout cannot block the fresh SUBSCRIBE that heals the channel; a short timeout bounds the
+   * background request and its rejection is intentionally swallowed (the SID is already gone).
+   */
+  private bestEffortUnsubscribe(sid: string): void {
+    fetch(new Request(
+      `http://${this.resolvedIp ?? this.host}:${this.port}${this.eventSubUrl}`,
+      {
+        method: 'UNSUBSCRIBE',
+        headers: { SID: sid },
+        signal: AbortSignal.timeout(5000),
+      },
+    )).catch((err: Error) => {
+      this.debug('Best-effort UNSUBSCRIBE of stale SID %s failed (ignored): %o', sid, err);
+    });
   }
 
   /**
