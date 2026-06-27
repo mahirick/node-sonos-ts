@@ -354,18 +354,18 @@ export default abstract class BaseService <TServiceEvent> {
   private static readonly RenewIntervalMs = (BaseService.SubscriptionTimeoutSeconds / 2) * 1000;
 
   /**
-   * Grace period after subscribing before the liveness check can flag a subscription as
-   * stalled. Covers a freshly-subscribed service that legitimately hasn't emitted yet
-   * (the on-subscribe state dump can lag) and idle zones.
+   * Channels that must NOT, on their own, keep a subscription alive or trigger one: the
+   * EventEmitter meta-events plus the diagnostic error/stall/recovery signals. A caller
+   * listening only to these (e.g. just SubscriptionStalled) gets no auto-subscribe, and
+   * removing the last real listener still tears the subscription down.
    */
-  private static readonly SubscribeGraceMs = 90 * 1000;
-
-  /**
-   * Liveness window: a subscription that has received no NOTIFY within this window is
-   * considered to have a dead delivery channel. Must be strictly greater than the renew
-   * interval so a merely-quiet zone isn't falsely flagged.
-   */
-  private static readonly LivenessWindowMs = BaseService.RenewIntervalMs + 60 * 1000;
+  private static readonly ControlChannels = new Set<ServiceEvents | string>([
+    'removeListener',
+    'newListener',
+    ServiceEvents.SubscriptionError,
+    ServiceEvents.SubscriptionStalled,
+    ServiceEvents.SubscriptionRecovered,
+  ]);
 
   private sid?: string;
 
@@ -379,9 +379,10 @@ export default abstract class BaseService <TServiceEvent> {
   private lastNotifyAt?: number;
 
   /**
-   * Timestamp (ms) of the most recent successful subscribe. Undefined until the service
-   * has an active subscription; the liveness check is inert while this is undefined, so
-   * services with no listeners / SONOS_DISABLE_EVENTS are unaffected.
+   * Timestamp (ms) of the most recent successful subscribe, exposed for diagnostics.
+   * Undefined until the service has an active subscription. Not used to drive resubscribe:
+   * stall recovery is keyed on renew FAILURE, never on NOTIFY-silence (an idle Sonos zone
+   * sends no keepalive NOTIFYs, so silence cannot distinguish idle from dead).
    */
   private subscribedAt?: number;
 
@@ -399,7 +400,7 @@ export default abstract class BaseService <TServiceEvent> {
       this.events.on('removeListener', async (eventName: string | symbol) => {
         this.debug('Listener removed for %s', eventName);
 
-        const events = this.events?.eventNames().filter((e) => e !== 'removeListener' && e !== 'newListener' && e !== ServiceEvents.SubscriptionError);
+        const events = this.events?.eventNames().filter((e) => !BaseService.ControlChannels.has(e as ServiceEvents));
         if (this.sid !== undefined && events?.length === 0) {
           await this.cancelSubscription()
             .catch((err: Error) => {
@@ -409,7 +410,7 @@ export default abstract class BaseService <TServiceEvent> {
         }
       });
       this.events.on('newListener', async (eventName: string | symbol) => {
-        if (eventName === ServiceEvents.SubscriptionError) return;
+        if (BaseService.ControlChannels.has(eventName as ServiceEvents)) return;
         this.debug('Listener added for %s  (sid: \'%s\', SONOS_DISABLE_EVENTS: %o)', eventName, this.sid, (typeof process.env.SONOS_DISABLE_EVENTS === 'undefined'));
         if (this.sid === undefined && process.env.SONOS_DISABLE_EVENTS === undefined) {
           this.debug('Subscribing to events');
@@ -428,6 +429,16 @@ export default abstract class BaseService <TServiceEvent> {
     if (this.events !== undefined) {
       this.events.emit(ServiceEvents.SubscriptionError, err);
     }
+  }
+
+  private emitOnChannel(
+    channel: ServiceEvents.SubscriptionError | ServiceEvents.SubscriptionStalled | ServiceEvents.SubscriptionRecovered,
+    err: EventsError,
+  ): void {
+    if (this.events === undefined) return;
+    // All three channels carry an EventsError payload, but a dynamic key defeats the typed
+    // emitter's per-channel arg narrowing, so the emit is asserted to the EventsError shape.
+    (this.events.emit as (event: ServiceEvents, payload: EventsError) => void)(channel, err);
   }
 
   /**
@@ -492,69 +503,71 @@ export default abstract class BaseService <TServiceEvent> {
   }
 
   /**
-   * Decide whether the subscription's delivery channel looks dead: the speaker accepts the
-   * SID (renews succeed) but no NOTIFY has arrived within the liveness window. Inert until
-   * the service has actually subscribed, and only fires after the grace window so a
-   * freshly-subscribed or idle zone isn't falsely flagged.
+   * The time (ms) of the most recent successful (re)subscribe, exposed for diagnostics.
+   * Undefined until the service has an active subscription.
    */
-  private isStalled(): boolean {
-    if (this.subscribedAt === undefined) {
-      return false;
-    }
-    const now = Date.now();
-    if (now - this.subscribedAt <= BaseService.SubscribeGraceMs) {
-      return false;
-    }
-    return this.lastNotifyAt === undefined || now - this.lastNotifyAt > BaseService.LivenessWindowMs;
+  public get SubscribedAt(): number | undefined {
+    return this.subscribedAt;
   }
 
   /**
    * Renew event subscription, is called automatically.
    *
+   * A successful renew (the speaker accepts the SID) is treated as a live channel — even
+   * when the zone is quiet. Sonos sends NOTIFYs only on actual state change, never as a
+   * keepalive, so NOTIFY-silence cannot distinguish an idle zone from a dead channel and
+   * must NOT drive a resubscribe (doing so storms every idle zone on a loop). The only
+   * dead-channel signal the lib can see is a renew FAILURE (the speaker rejecting/
+   * forgetting the SID); transport-state-aware liveness belongs in the caller (the proxy),
+   * which corroborates silence against a coordinator known to be PLAYING.
+   *
    * @private
    * @remarks Do not call manually!!
    */
   private async renewEventSubscription(): Promise<boolean> {
-    if (this.isStalled()) {
-      this.debug('Subscription %s is stalled (no NOTIFY within liveness window), resubscribing fresh', this.sid);
-      return this.resubscribeFresh();
-    }
-
     this.debug('Renewing event subscription');
     await this.ResolveHostname();
     if (typeof this.sid === 'string' && this.sid !== '') {
-      const resp = await fetch(new Request(
-        `http://${this.resolvedIp ?? this.host}:${this.port}${this.eventSubUrl}`,
-        {
-          method: 'SUBSCRIBE',
-          headers: {
-            SID: this.sid,
-            Timeout: BaseService.SubscriptionTimeoutHeader,
+      try {
+        const resp = await fetch(new Request(
+          `http://${this.resolvedIp ?? this.host}:${this.port}${this.eventSubUrl}`,
+          {
+            method: 'SUBSCRIBE',
+            headers: {
+              SID: this.sid,
+              Timeout: BaseService.SubscriptionTimeoutHeader,
+            },
+            signal: AbortSignal.timeout(15000),
           },
-          signal: AbortSignal.timeout(15000),
-        },
-      ));
-      if (resp.ok) {
-        this.debug('Renewed event subscription');
-        return true;
+        ));
+        if (resp.ok) {
+          this.debug('Renewed event subscription');
+          return true;
+        }
+        this.debug('Renew event subscription rejected (status %d), resubscribing fresh', resp.status);
+      } catch (err) {
+        this.debug('Renew event subscription threw, resubscribing fresh: %o', err);
       }
     }
 
-    this.debug('Renew event subscription failed, trying to resubscribe');
     return this.resubscribeFresh();
   }
 
   /**
-   * Recover a dead delivery channel by rotating the SID: best-effort UNSUBSCRIBE of the old
-   * SID (the speaker may already have dropped it), unregister it from the listener, then a
-   * full subscribe to obtain a new SID. Surfaces a structured stalled/recovered signal on
-   * the existing SubscriptionError channel so callers can log and corroborate.
+   * Recover a dead delivery channel (a renew the speaker rejected) by rotating the SID:
+   * best-effort UNSUBSCRIBE of the old SID (the speaker may already have dropped it),
+   * unregister it from the listener, then a full subscribe to obtain a new SID. Surfaces a
+   * SubscriptionStalled signal on entry and SubscriptionRecovered on actual SID rotation,
+   * on dedicated event channels so a caller's error handler is never forced to treat a
+   * recovery as a dead subscription.
    *
    * @private
-   * @returns {Promise<boolean>} true if a new SID was landed.
+   * @returns {Promise<boolean>} true if a live subscription is in place afterwards (a
+   *   usable SID is present), preserving the original "do we have a live subscription"
+   *   meaning of the renew return value.
    */
   private async resubscribeFresh(): Promise<boolean> {
-    this.emitEventsError(new EventsError(EventsErrorCode.SubscriptionStalled));
+    this.emitOnChannel(ServiceEvents.SubscriptionStalled, new EventsError(EventsErrorCode.SubscriptionStalled));
     const oldSid = this.sid;
     await this.ResolveHostname();
 
@@ -576,12 +589,11 @@ export default abstract class BaseService <TServiceEvent> {
     }
 
     await this.subscribeForEvents();
-    const recovered = this.sid !== undefined && this.sid !== oldSid;
-    if (recovered) {
+    if (this.sid !== undefined && this.sid !== oldSid) {
       this.debug('Resubscribed fresh, new SID %s (was %s)', this.sid, oldSid);
-      this.emitEventsError(new EventsError(EventsErrorCode.SubscriptionRecovered));
+      this.emitOnChannel(ServiceEvents.SubscriptionRecovered, new EventsError(EventsErrorCode.SubscriptionRecovered));
     }
-    return recovered;
+    return this.sid !== undefined;
   }
 
   /**
