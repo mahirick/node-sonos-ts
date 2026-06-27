@@ -10,4 +10,6 @@ export enum EventsErrorCode {
   SubscribeFailed = 'SubscribeFailed',
   RenewSubscriptionFailed = 'RenewSubscriptionFailed',
   UnsubscribeFailed = 'UnsubscribeFailed',
+  SubscriptionStalled = 'SubscriptionStalled',
+  SubscriptionRecovered = 'SubscriptionRecovered',
 }

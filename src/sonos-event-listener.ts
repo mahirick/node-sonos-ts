@@ -162,6 +162,7 @@ export default class SonosEventListener {
         resp.statusCode = 200;
         resp.end('OK');
         // End response before parsing event.
+        service.NotifyReceived();
         service.ParseEvent(bodyString);
       })
       .on('error', (err: Error) => {
@@ -209,6 +210,7 @@ export default class SonosEventListener {
         uuid: value.Uuid,
         host: value.Host,
         service: value.serviceNane,
+        lastEventAt: value.LastNotifyAt,
       }));
   }
 
@@ -293,6 +295,7 @@ interface SubscriptionInfo {
   service: string;
   uuid: string;
   host: string;
+  lastEventAt?: number;
 }
 
 interface SonosEventListenerStatus {

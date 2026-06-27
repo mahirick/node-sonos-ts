@@ -117,11 +117,11 @@ describe('SonosDevice - Events', () => {
       });
 
     scope
-      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: avtransportSid, Timeout: 'Second-3600' }})
+      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: avtransportSid, Timeout: 'Second-300' }})
       .reply(200, '');
-    
+
     scope
-      .intercept('/MediaRenderer/RenderingControl/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: renderingControlSid, Timeout: 'Second-3600' }})
+      .intercept('/MediaRenderer/RenderingControl/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: renderingControlSid, Timeout: 'Second-300' }})
       .reply(200, '');
 
     const device = new SonosDevice(TestHelpers.testHost, port);
@@ -145,7 +145,7 @@ describe('SonosDevice - Events', () => {
       });
     
     scope
-      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: avtransportSid, Timeout: 'Second-3600' }})
+      .intercept('/MediaRenderer/AVTransport/Event', 'SUBSCRIBE', undefined, { reqheaders: { SID: avtransportSid, Timeout: 'Second-300' }})
       .reply(200, '');
 
     const device = new SonosDevice(TestHelpers.testHost, port);
