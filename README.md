@@ -1,3 +1,23 @@
+<!-- MAHISOFT FORK NOTE -->
+> ## ⚠️ This is the Mahisoft fork (`mahirick/node-sonos-ts`)
+>
+> A privately-maintained fork of [`@svrooij/sonos`](https://github.com/svrooij/node-sonos-ts),
+> forked because upstream is dormant (v2.5.0, ~2022, EOL deps). It modernizes the dependency
+> stack and adds a firmware-tripwire regression suite. **Not published to npm** — consumed by
+> git-install pinned to a tag.
+>
+> - **Current tag:** `v2.5.0-mahi.1` → `github:mahirick/node-sonos-ts#v2.5.0-mahi.1`
+> - **Requires Node ≥ 18** (uses native `fetch`).
+> - **Working on this repo?** Read [`CLAUDE.md`](./CLAUDE.md) first — gates, iron rules,
+>   XML-parser pinning, native-fetch facts, status.
+> - **Consuming this fork?** See [`HANDOFF-spotplaya.md`](./HANDOFF-spotplaya.md) (integration
+>   + gotchas) and [`CHANGELOG-mahi.md`](./CHANGELOG-mahi.md) (what changed vs upstream).
+> - **The firmware-tripwire suite:** [`tests/firmware-tripwire/`](./tests/firmware-tripwire/).
+>
+> The upstream README follows, unchanged.
+
+---
+
 # Sonos (the typescript version)
 
 [![Sonos typescript this library][badge_sonos-typescript]][link_sonos-typescript]
